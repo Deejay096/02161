@@ -8,19 +8,19 @@ public class Projekt{
 
 	String Navn;
 	
-	List<Aktivitet> aktivitetsListe = new ArrayList<Aktivitet>(); 
+	static List<Aktivitet> aktivitetsListe = new ArrayList<Aktivitet>(); 
 
 	public Projekt(String navn)
 	{
 		this.Navn = navn;
 	}
 
-	public void LavAktivitet(String navn, String id){
-		Aktivitet aktivitet = new Aktivitet(navn ,id);
+	public static void LavAktivitet(String navn, String id){
+		Aktivitet aktivitet = new Aktivitet(navn,id);
 		TilføjAktivitet(aktivitet);
 	}
 
-	public void TilføjAktivitet(Aktivitet aktivitet){
+	public static void TilføjAktivitet(Aktivitet aktivitet){
 		aktivitetsListe.add(aktivitet); 
 	}
 
@@ -32,12 +32,12 @@ public class Projekt{
 		}
 	}
 
-	public void VisAktivitetsListe(ArrayList<String> Liste){
-		System.out.println(aktivitetsListe);
+	public static void VisAktivitetsListe(){
+		System.out.println(aktivitetsListe.toString());
 
 	}
 
-	public void Sorter(List<String> aktivitetsListe)
+	public static void Sorter(List<String> aktivitetsListe)
 	{
 		if(aktivitetsListe.isEmpty() == false)
 		{
@@ -45,7 +45,7 @@ public class Projekt{
 		}
 	}
 
-	public void search(String name)
+	public static void search(String name)
 	{	
 		if(aktivitetsListe.contains(name) == true)
 		{
@@ -57,4 +57,11 @@ public class Projekt{
 		}
 	}
 
+	public static void main(String[] args)
+	{
+		LavAktivitet("hi", "1");
+		LavAktivitet("nice", "2");
+		LavAktivitet("it work", "6");
+		VisAktivitetsListe();
+	}
 }

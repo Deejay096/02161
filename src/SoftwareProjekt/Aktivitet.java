@@ -17,6 +17,7 @@ public class Aktivitet {
 		this.AktivitetsID = id;
 	}
 
+
 	public void TidsRegistrering(int tid){
 
 
