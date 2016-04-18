@@ -17,7 +17,7 @@ public class Aktivitet {
 
 	}
 
-	public void TilføjMedarbejder(String Arbejder){
+	public void TilfoejMedarbejder(String Arbejder){
 		Medarbejder.add(Arbejder); 
 
 	}
