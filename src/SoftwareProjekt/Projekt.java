@@ -40,15 +40,15 @@ public class Projekt{
 		}
 	}
 
-	public static void Sorter(List<String> aktivitetsListe)
+	public static void Sorter()
 	{
 		if(aktivitetsListe.isEmpty() == false)
 		{
-		   Collections.sort(aktivitetsListe);
+			
 		}
 	}
 
-	public static void search(String name)
+	public static void soege(String name)
 	{	
 		if(aktivitetsListe.contains(name) == true)
 		{
@@ -56,7 +56,7 @@ public class Projekt{
 		}
 		else
 		{
-			System.out.println("Findes ikke, ^-^ hahaha");
+			System.out.println("Dit søgte aktivitet findes ikke, ^-^ hahaha");
 		}
 	}
 
@@ -66,5 +66,8 @@ public class Projekt{
 		LavAktivitet("nice", "2");
 		LavAktivitet("it work", "6");
 		VisAktivitetsListe();
+		soege("hej");
+		Sorter();
+		
 	}
 }

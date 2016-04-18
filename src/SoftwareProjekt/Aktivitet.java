@@ -43,9 +43,6 @@ public class Aktivitet {
 
 	public boolean Faerdig(){
 		return Tjek == true;
-
-
-
 	}
 
 	public void PrintMedarbejderListe(ArrayList<String> Liste){
