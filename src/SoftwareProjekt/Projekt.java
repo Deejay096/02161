@@ -2,7 +2,7 @@ package SoftwareProjekt;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Collection;
+import java.util.Collections;
 
 public class Projekt extends Aktivitet {
 
@@ -15,10 +15,8 @@ public class Projekt extends Aktivitet {
 
 	}
 
-
 	public void TilføjAktivitet(Aktivitet aktivitet){
 		aktivitetsListe.add(aktivitet); 
-
 
 	}
 
@@ -31,14 +29,19 @@ public class Projekt extends Aktivitet {
 
 	}
 
-	public void AktivitetsListe(ArrayList<String> Liste){
+	public void VisAktivitetsListe(ArrayList<String> Liste){
 		System.out.println(aktivitetsListe);
 
 	}
 
-	public void Sorter(List aktivitetsListe){
-		aktivitetsListe.sort(aktivitetsListe);
+	public void Sorter(List aktivitetsListe)
+	{
+		if(aktivitetsListe.isEmpty() == false)
+		{
+		   Collections.sort(aktivitetsListe);
+		}
 	}
 
+	
 
 }
