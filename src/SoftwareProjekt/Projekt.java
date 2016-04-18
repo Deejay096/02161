@@ -14,7 +14,7 @@ public class Projekt{
 	{
 		this.Navn = navn;
 	}
-	
+
 	public void LavAktivitet(String navn, String id){
 		Aktivitet aktivitet = new Aktivitet(navn ,id);
 		TilføjAktivitet(aktivitet);

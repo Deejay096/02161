@@ -1,12 +1,8 @@
 package SoftwareProjekt;
 
-public class Main extends Projekt
+public class Main 
 {
 
-	public Main(String navn) {
-		super(navn);
-		
-	}
 	
 
 }
