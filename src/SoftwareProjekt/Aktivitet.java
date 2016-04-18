@@ -11,6 +11,11 @@ public class Aktivitet {
 	public double[] TidsRegistrering; 
 	public boolean Tjek; 
 
+	public Aktivitet(String navn, String id)
+	{
+		this.Navn = navn;
+		this.AktivitetsID = id;
+	}
 
 	public void TidsRegistrering(int tid){
 

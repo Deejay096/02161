@@ -4,13 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
 
-public class Projekt extends Aktivitet {
+public class Projekt{
 
-	List<Aktivitet> aktivitetsListe = new ArrayList<>(); 
+	String Navn;
+	
+	List<Aktivitet> aktivitetsListe = new ArrayList<Aktivitet>(); 
 
-
-	public void LavAktivitet(){
-		Aktivitet aktivitet = new Aktivitet();
+	public Projekt(String navn)
+	{
+		this.Navn = navn;
+	}
+	
+	public void LavAktivitet(String navn, String id){
+		Aktivitet aktivitet = new Aktivitet(navn ,id);
 		TilføjAktivitet(aktivitet);
 	}
 
