@@ -12,12 +12,10 @@ public class Projekt extends Aktivitet {
 	public void LavAktivitet(){
 		Aktivitet aktivitet = new Aktivitet();
 		TilføjAktivitet(aktivitet);
-
 	}
 
 	public void TilføjAktivitet(Aktivitet aktivitet){
 		aktivitetsListe.add(aktivitet); 
-
 	}
 
 	public void FjernAktivitet(Aktivitet aktivitet){
@@ -26,7 +24,6 @@ public class Projekt extends Aktivitet {
 				aktivitetsListe.remove(i);
 			}
 		}
-
 	}
 
 	public void VisAktivitetsListe(ArrayList<String> Liste){
@@ -34,7 +31,7 @@ public class Projekt extends Aktivitet {
 
 	}
 
-	public void Sorter(List aktivitetsListe)
+	public void Sorter(List<String> aktivitetsListe)
 	{
 		if(aktivitetsListe.isEmpty() == false)
 		{
@@ -42,6 +39,16 @@ public class Projekt extends Aktivitet {
 		}
 	}
 
-	
+	public void search(String name)
+	{	
+		if(aktivitetsListe.contains(name) == true)
+		{
+			System.out.println("vis aktivit på en mystisk måde.");
+		}
+		else
+		{
+			System.out.println("Findes ikke, ^-^ hahaha");
+		}
+	}
 
 }
