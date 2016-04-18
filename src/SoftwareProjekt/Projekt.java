@@ -32,9 +32,12 @@ public class Projekt{
 		}
 	}
 
-	public static void VisAktivitetsListe(){
-		System.out.println(aktivitetsListe.toString());
-
+	public static void VisAktivitetsListe()
+	{
+		for(Aktivitet aktivitet: aktivitetsListe)
+		{
+			System.out.println(aktivitet.getName());
+		}
 	}
 
 	public static void Sorter(List<String> aktivitetsListe)

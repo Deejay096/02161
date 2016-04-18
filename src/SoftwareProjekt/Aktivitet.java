@@ -16,7 +16,11 @@ public class Aktivitet {
 		this.Navn = navn;
 		this.AktivitetsID = id;
 	}
-
+	
+	public String getName()
+	{
+		return Navn;
+	}
 
 	public void TidsRegistrering(int tid){
 
