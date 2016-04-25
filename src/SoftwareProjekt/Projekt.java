@@ -2,25 +2,27 @@ package SoftwareProjekt;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Collections;
 
 public class Projekt{
 
 	String Navn;
+	int index;
 	
-	static List<Aktivitet> aktivitetsListe = new ArrayList<Aktivitet>(); 
-
-	public Projekt(String navn)
+	List<Aktivitet> aktivitetsListe = new ArrayList<Aktivitet>(); 
+	
+	public Projekt(String navn, int index)
 	{
+		this.index = index;
 		this.Navn = navn;
 	}
 
-	public static void LavAktivitet(String navn, String id){
-		Aktivitet aktivitet = new Aktivitet(navn,id);
+	public void LavAktivitet(String navn, int index){
+		Aktivitet aktivitet = new Aktivitet(navn,index);
 		TilføjAktivitet(aktivitet);
 	}
 
-	public static void TilføjAktivitet(Aktivitet aktivitet){
+
+	public void TilføjAktivitet(Aktivitet aktivitet){
 		aktivitetsListe.add(aktivitet); 
 	}
 
@@ -31,8 +33,22 @@ public class Projekt{
 			}
 		}
 	}
+	
+	public Aktivitet getProjekt(String projektnavn,int index){
+		if(aktivitetsListe.contains(index) == true || aktivitetsListe.contains(projektnavn) == true ){
+			for (Aktivitet A: aktivitetsListe )
+			if(A.index == index){
+				return A;
+			}
+			for (Aktivitet A: aktivitetsListe )
+				if(A.equals(projektnavn)){
+					return A;
+				}
+		}
+		return null;
+	}
 
-	public static void VisAktivitetsListe()
+	public void VisAktivitetsListe()
 	{
 		for(Aktivitet aktivitet: aktivitetsListe)
 		{
@@ -40,7 +56,7 @@ public class Projekt{
 		}
 	}
 
-	public static void Sorter()
+	public void Sorter()
 	{
 		if(aktivitetsListe.isEmpty() == false)
 		{
@@ -48,7 +64,7 @@ public class Projekt{
 		}
 	}
 
-	public static void soege(String name)
+	public void soege(String name)
 	{	
 		if(aktivitetsListe.contains(name) == true)
 		{
@@ -60,14 +76,14 @@ public class Projekt{
 		}
 	}
 
-	public static void main(String[] args)
+	public void main(String[] args)
 	{
-		LavAktivitet("hi", "1");
-		LavAktivitet("nice", "2");
-		LavAktivitet("it work", "6");
+		LavAktivitet("hi", 1);
+		LavAktivitet("nice", 2);
+		LavAktivitet("it work", 2);
 		VisAktivitetsListe();
-		soege("hej");
-		Sorter();
+		//soege("hej");
+		//Sorter();
 		
 	}
 }

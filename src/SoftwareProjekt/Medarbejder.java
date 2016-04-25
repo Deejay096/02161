@@ -1,9 +1,9 @@
 package SoftwareProjekt;
 
-public class Medarbejder {
+public class Medarbejder extends Oprettelse {
 	public String Navn;
 	public String Intialer;
-	public String Telefonnummer;
+	public String Tlf;
 	public String Email;
 	public String CPR;
 	
@@ -11,15 +11,30 @@ public class Medarbejder {
 	public static String[] søjleNavne = {"Navn","Intialer","CPR","Månede","Uge","dato","Tid"};
 	
 	
-	public Medarbejder(String navn2, String intialer2, String telefonnummer2, String email2, String cPR2,
-			boolean NIGGER) {
-		
+	public Medarbejder(String Navn, String Intialer, String Tlf, String Email, String CPR) {
+		this.CPR = CPR;
+		this.Email = Email;
+		this.Intialer = Intialer;
+		this.Tlf = Tlf;
+		this.Navn = Navn;
 	}
-
+	
+	public void Aktivitet (String etellerandet){
+		//Noget der hente en liste
+		//Skal kunne registrer tid under en specefik aktivitet 
+		//Lave tidsregistrering ugevis?
+		
+		
+		
+		//Muligheder:
+		//boolean
+		//x = x + etellerandet;
+	}
 	public static void main(String[]args){
 		
-		
-		
 	}
+	
+	
+		
 
 }

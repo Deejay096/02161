@@ -5,16 +5,16 @@ import java.util.List;
 
 public class Aktivitet {
 	public String Navn; 
-	public String AktivitetsID; 
 	public double Tid; 
 	public List<String> Medarbejder;
 	public double[] TidsRegistrering; 
-	public boolean Tjek; 
+	public boolean Tjek;
+	public int index; 
 
-	public Aktivitet(String navn, String id)
+	public Aktivitet(String navn, int index)
 	{
 		this.Navn = navn;
-		this.AktivitetsID = id;
+		this.index = index;
 	}
 	
 	public String getName()
@@ -22,14 +22,13 @@ public class Aktivitet {
 		return Navn;
 	}
 
-	public void TidsRegistrering(int tid){
-
-
+	public void TidsRegistrering(int x){
+		 Tid = Tid + x; 
 	}
 
+	
 	public void TilfoejMedarbejder(String Arbejder){
 		Medarbejder.add(Arbejder); 
-
 	}
 
 	public void FjernMedarbejder(String Arbejder){
