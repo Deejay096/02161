@@ -9,9 +9,9 @@ public class Aktivitet {
 	public List<String> Medarbejder;
 	public double[] TidsRegistrering; 
 	public boolean Tjek;
-	public int index; 
+	public String index; 
 
-	public Aktivitet(String navn, int index)
+	public Aktivitet(String navn, String index)
 	{
 		this.Navn = navn;
 		this.index = index;

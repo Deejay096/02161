@@ -7,7 +7,7 @@ public class Main {
 	List<Projekt> projektListe = new ArrayList<Projekt>();
 	
 	
-	public void LavProjekt(String navn,int index){
+	public void LavProjekt(String navn,String index){
 		Projekt projekt = new Projekt(navn,index);
 	}
 	
@@ -17,10 +17,10 @@ public class Main {
 //		}
 //	}
 	
-	public Projekt getProjekt(String projektnavn,int index){
+	public Projekt getProjekt(String projektnavn,String index){
 		if(projektListe.contains(index) == true || projektListe.contains(projektnavn) == true ){
 			for (Projekt p: projektListe )
-			if(p.index == index){
+			if(p.equals(index)){
 				return p;
 			}
 			for (Projekt p: projektListe )
@@ -33,7 +33,7 @@ public class Main {
 	
 	
 	public void main(String[] args){
-		LavProjekt("hi",1);
+		LavProjekt("hi","1");
 		
 	}
 }

@@ -6,41 +6,28 @@ import java.util.List;
 public class Projekt{
 
 	String Navn;
-	int index;
+	String index;
+	Aktivitet aktivitet;
 	
-	List<Aktivitet> aktivitetsListe = new ArrayList<Aktivitet>(); 
+	List<Aktivitet> projektAktivitetList  = new ArrayList<Aktivitet>(); 
 	
-	public Projekt(String navn, int index)
-	{
+	public Projekt(String navn, String index){
 		this.index = index;
 		this.Navn = navn;
 	}
-
-	public void LavAktivitet(String navn, int index){
-		Aktivitet aktivitet = new Aktivitet(navn,index);
-		TilføjAktivitet(aktivitet);
-	}
-
-
-	public void TilføjAktivitet(Aktivitet aktivitet){
-		aktivitetsListe.add(aktivitet); 
-	}
-
-	public void FjernAktivitet(Aktivitet aktivitet){
-		for(int i = 0; i > aktivitetsListe.size(); i++){
-			if(aktivitetsListe.get(i) == aktivitet){
-				aktivitetsListe.remove(i);
-			}
-		}
+	public void tilføjAktivitet(String Navn, String Index){
+		Oprettelse opret = new Oprettelse();
+		aktivitet = opret.opretAktivitet(Navn, Index);
+		projektAktivitetList.add(aktivitet);
 	}
 	
-	public Aktivitet getProjekt(String projektnavn,int index){
-		if(aktivitetsListe.contains(index) == true || aktivitetsListe.contains(projektnavn) == true ){
-			for (Aktivitet A: aktivitetsListe )
-			if(A.index == index){
+	public Aktivitet getProjekt(String projektnavn,String index){
+		if(projektAktivitetList.contains(index) == true || projektAktivitetList.contains(projektnavn) == true ){
+			for (Aktivitet A: projektAktivitetList )
+			if(A.equals(index)){
 				return A;
 			}
-			for (Aktivitet A: aktivitetsListe )
+			for (Aktivitet A: projektAktivitetList )
 				if(A.equals(projektnavn)){
 					return A;
 				}
@@ -48,29 +35,25 @@ public class Projekt{
 		return null;
 	}
 
-	public void VisAktivitetsListe()
-	{
-		for(Aktivitet aktivitet: aktivitetsListe)
-		{
+	public void visProjektAktivitetList(){
+		for(Aktivitet aktivitet: projektAktivitetList){
 			System.out.println(aktivitet.getName());
 		}
 	}
 
-	public void Sorter()
-	{
-		if(aktivitetsListe.isEmpty() == false)
-		{
+	public void Sorter(){
+		if(projektAktivitetList.isEmpty() == false){
 			
 		}
 	}
 
 	public void soege(String name)
 	{	
-		int i = aktivitetsListe.indexOf(name)+1;
+		int i = projektAktivitetList.indexOf(name)+1;
 		
-		if(i <= aktivitetsListe.size()-1)
+		if(i <= projektAktivitetList.size()-1)
 		{
-			if(aktivitetsListe.contains(aktivitetsListe.get(i)) == true)
+			if(projektAktivitetList.contains(projektAktivitetList.get(i)) == true)
 			{
 				System.out.println("vis aktivit på en mystisk måde.");
 			}
@@ -83,12 +66,12 @@ public class Projekt{
 
 	public void main(String[] args)
 	{
-		LavAktivitet("hi", 1);
-		LavAktivitet("nice", 2);
-		LavAktivitet("it work", 2);
-		VisAktivitetsListe();
-		//soege("hej");
-		//Sorter();
+//		LavAktivitet("hi", "1");
+//		LavAktivitet("nice", "2");
+//		LavAktivitet("it work", "2");
+//		VisAktivitetsListe();
+//		soege("hey");
+//		Sorter();
 
 		
 	}
