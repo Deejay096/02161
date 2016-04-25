@@ -5,7 +5,7 @@ public class calendar
 	public static void cal()
 	{
 		int cols = 7;
-		int offset = 0; // range from 0 to 6 
+		int offset = 0;  
 		int start = 1 - offset;
 		int end = 31;
 		System.out.println("Su Mo Tu We Th Fr Sa");
@@ -16,7 +16,7 @@ public class calendar
 			{
 				if (j<10)
 				{ 
-					System.out.print(" "+j+" "); // just neater output
+					System.out.print(" "+j+" "); 
 				} 
 				else 
 				{ 
@@ -25,17 +25,17 @@ public class calendar
 			}
 			else
 			{
-				System.out.print("   "); // 3 spaces
+				System.out.print("   "); 
 			}
 		 
 			if (j>0 && j%cols==0)
 			{
-				System.out.println(); // new row or line
-			} // end if
+				System.out.println(); // ny række
+			} 
 		 
 			start=j+1;
 		 
-		} // end j for loop	
+		} 	
 	}
 	
 	public static void main(String[] args)
