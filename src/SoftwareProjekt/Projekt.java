@@ -50,9 +50,14 @@ public class Projekt{
 
 	public static void soege(String name)
 	{	
-		if(aktivitetsListe.contains(name) == true)
+		int i = aktivitetsListe.indexOf(name)+1;
+		
+		if(i <= aktivitetsListe.size()-1)
 		{
-			System.out.println("vis aktivit på en mystisk måde.");
+			if(aktivitetsListe.contains(aktivitetsListe.get(i)) == true)
+			{
+				System.out.println("vis aktivit på en mystisk måde.");
+			}
 		}
 		else
 		{
@@ -66,7 +71,7 @@ public class Projekt{
 		LavAktivitet("nice", "2");
 		LavAktivitet("it work", "6");
 		VisAktivitetsListe();
-		soege("hej");
+		soege("hi");
 		Sorter();
 		
 	}
