@@ -10,14 +10,24 @@ public class Oprettelse {
 	public String CPR;
 	public String Index;
 
-	List<Medarbejder> medarbejderList = new ArrayList<>();
-	List<Projektleder> projektlederList = new ArrayList<>();
-	List<Projekt> projektList = new ArrayList<>();
-	List<Aktivitet> aktivitetList = new ArrayList<>();
+	public List<Medarbejder> medarbejderList = new ArrayList<>();
+	public List<Aktivitet> aktivitetList = new ArrayList<>();
+	public List<Projekt> projektList = new ArrayList<>();
+	
+	
+	public List<Medarbejder> getmedarbejderList() {
+	    return this.medarbejderList;
+	}
+	public List<Aktivitet> getaktivitetList() {
+	    return this.aktivitetList;
+	}
+	public List<Projekt> getprojektList() {
+	    return this.projektList;
+	}
 
 	//Vi opretter en medarbejder class med (String Navn,String Intialer,String Telefonnummer,String Email,String CPR)
-	public Medarbejder opretMedarbejder(String Navn,String Intialer,String Tlf,String Email,String CPR){
-		Medarbejder medarbejder = new Medarbejder(Navn,Intialer,Tlf,Email,CPR);
+	public Medarbejder opretMedarbejder(String Navn,String Intialer,String Tlf,String Email,String CPR, Boolean Projektleder){
+		Medarbejder medarbejder = new Medarbejder(Navn,Intialer,Tlf,Email,CPR,Projektleder);
 		medarbejderList.add(medarbejder);
 		return medarbejder;
 	}
@@ -36,30 +46,6 @@ public class Oprettelse {
 		}
 		else{
 			System.out.println("Medarbejder findes ikke: Tjek Navn og CPR-nummer igen");
-		}
-	}
-
-	//Vi opretter en projektleder class med (String Navn,String Intialer,String Tlf,String Email,String CPR)
-	public Projektleder opretProjektleder(String Navn,String Intialer,String Tlf,String Email,String CPR){
-		Projektleder projektleder = new Projektleder(Navn,Intialer,Tlf,Email,CPR);
-		projektlederList.add(projektleder);
-		return projektleder;
-	}
-
-	//Vi fjerner en projektleder med det rigtige Navn og CPR, og vi fjerner kun projektlederen, hvis disse to er rigtige.
-	public void FjernProjektleder(Projektleder projektleder){
-		if(projektlederList.contains(CPR) == true && projektlederList.contains(Navn) == true ){
-			for (Projektleder m: projektlederList )
-				if(m.equals(CPR)){
-					projektlederList.remove(CPR);
-				}
-			for (Projektleder m: projektlederList )
-				if(m.equals(Navn)){
-					projektlederList.remove(Navn);
-				}
-		}
-		else{
-			System.out.println("Projektleder findes ikke: Tjek Navn og CPR-nummer igen");
 		}
 	}
 
