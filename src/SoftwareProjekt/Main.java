@@ -2,8 +2,17 @@ package SoftwareProjekt;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.imageio.ImageIO;
+import javax.swing.*;
 
-public class Main {
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+
+public class Main extends JPanel implements MouseListener{
 	List<Projekt> projektListe = new ArrayList<Projekt>();
 	
 	
@@ -33,7 +42,44 @@ public class Main {
 	
 	
 	public void main(String[] args){
+		Main main = new Main();
+	    JFrame frame = new JFrame("hi");
+	    frame.setSize(803, 930);
+	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    frame.setVisible(true);
+	    frame.setResizable(false);
+	    frame.add(main);
 		LavProjekt("hi","1");
+		
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
 		
 	}
 }
