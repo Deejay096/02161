@@ -2,24 +2,18 @@ package SoftwareProjekt;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.io.IOException;
-import java.io.PrintWriter;
-
 
 public class Main extends JFrame implements ActionListener{
 	List<Projekt> projektListe = new ArrayList<Projekt>();
 	
-	JButton lavActivet, hexB, binB; // vores convert knapper
-	JTextField decText, hexText, binText; // vores text fields
-	JLabel decLabel, hexLabel, binLabel; // vores labels
+	JButton lavAktivitet, lavMedarbejder, lavProjekt; // vores knapper
+	JTextField aktivitetT, medarbejderT, projektT; // vores text fields
+	JLabel aktivietLabel, medarbejderLabel, projektLabel; // vores labels
 	
 	public Main(){
 
@@ -29,62 +23,62 @@ public class Main extends JFrame implements ActionListener{
         getContentPane().setLayout(new BorderLayout());
 
 
-        lavActivet = new JButton("Aktivitet");
-        lavActivet.addActionListener(this);
-        lavActivet.setMaximumSize(BSize);
-        lavActivet.setAlignmentX(Component.CENTER_ALIGNMENT);
+        lavAktivitet = new JButton("Lav Aktivitet");
+        lavAktivitet.addActionListener(this);
+        lavAktivitet.setMaximumSize(BSize);
+        lavAktivitet.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        binB = new JButton("Binary");
-        binB.addActionListener(this);
-        binB.setMaximumSize(BSize);
-        binB.setAlignmentX(Component.CENTER_ALIGNMENT);
+        lavProjekt = new JButton("Lav Projekt");
+        lavProjekt.addActionListener(this);
+        lavProjekt.setMaximumSize(BSize);
+        lavProjekt.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        hexB = new JButton("Hexadecimal");
-        hexB.addActionListener(this);
-        hexB.setMaximumSize(BSize);
-        hexB.setAlignmentX(Component.CENTER_ALIGNMENT);
+        lavMedarbejder = new JButton("Hyr medarbejder");
+        lavMedarbejder.addActionListener(this);
+        lavMedarbejder.setMaximumSize(BSize);
+        lavMedarbejder.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        decText = new JTextField();
-        decText.setMaximumSize(TSize);
-        binText = new JTextField();
-        binText.setMaximumSize(TSize);
-        hexText = new JTextField();
-        hexText.setMaximumSize(TSize);
+        aktivitetT = new JTextField();
+        aktivitetT.setMaximumSize(TSize);
+        projektT = new JTextField();
+        projektT.setMaximumSize(TSize);
+        medarbejderT = new JTextField();
+        medarbejderT.setMaximumSize(TSize);
 
-        decLabel = new JLabel("Decimal:");
-        decLabel.setMaximumSize(BSize);
-        binLabel = new JLabel("Binary:");
-        binLabel.setMaximumSize(BSize);
-        hexLabel = new JLabel("Hexadecimal:");
-        hexLabel.setMaximumSize(BSize);
+        aktivietLabel = new JLabel("Indtast aktivitet");
+        aktivietLabel.setMaximumSize(BSize);
+        projektLabel = new JLabel("Indtast projekt");
+        projektLabel.setMaximumSize(BSize);
+        medarbejderLabel = new JLabel("Indtast medarbejder");
+        medarbejderLabel.setMaximumSize(BSize);
 
         JPanel p1 = new JPanel();
         p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));
         p1. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p1.add(lavActivet);
+        p1.add(lavAktivitet);
         p1. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p1.add(binB);
+        p1.add(lavProjekt);
         p1. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p1.add(hexB);
+        p1.add(lavMedarbejder);
 
 
         JPanel p2 = new JPanel();
         p2.setLayout(new BoxLayout(p2, BoxLayout.PAGE_AXIS));
         p2. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p2.add(decLabel);
+        p2.add(aktivietLabel);
         p2. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p2.add(binLabel);
+        p2.add(projektLabel);
         p2. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p2.add(hexLabel);
+        p2.add(medarbejderLabel);
 
         JPanel p3 = new JPanel();
         p3.setLayout(new BoxLayout(p3, BoxLayout.PAGE_AXIS));
         p3. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p3.add(decText);
+        p3.add(aktivitetT);
         p3. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p3.add(binText);
+        p3.add(projektT);
         p3. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p3.add(hexText);
+        p3.add(medarbejderT);
 
         getContentPane().add(p1, BorderLayout.EAST);
         getContentPane().add(p2, BorderLayout.WEST);
@@ -93,20 +87,31 @@ public class Main extends JFrame implements ActionListener{
         
     }
 	
-	public void actionPerformed(ActionEvent arg0){
-		// TODO Auto-generated method stub
-		
-	}
+	 public void actionPerformed( ActionEvent e) {
+
+	   if (e.getSource() == lavAktivitet) {
+	       String text = aktivitetT.getText();
+	           
+	       }
+
+	   if (e.getSource() == lavMedarbejder) {
+	       String text = medarbejderT.getText();
+	             
+	       }
+	             
+	   if (e.getSource() == lavProjekt) {
+	       String text = projektT.getText();
+	          
+	      }
+	 }
 	
-	public void main(String[] args){
-		Main main = new Main();
-	    JFrame frame = new JFrame("softwareudviklingsprojekter");
-	    frame.setSize(803, 930);
-	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    frame.setVisible(true);
-	    frame.setResizable(false);
-	    frame.add(main);
-		LavProjekt("hi","1");
+	public static void main(String[] args){
+		Main frame = new Main();
+        frame.setTitle("softwareudviklingsprojekter");
+        frame.setSize(1000, 160);
+        frame.setResizable(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
 		
 	}
 	
