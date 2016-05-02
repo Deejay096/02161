@@ -12,14 +12,14 @@ public class Main extends JFrame implements ActionListener{
 	List<Projekt> projektListe = new ArrayList<Projekt>();
 	
 	JButton lavAktivitet, lavMedarbejder, lavProjekt; // vores knapper
-	JTextField aktivitetT, medarbejderT, projektT; // vores text fields
-	JLabel aktivietLabel, medarbejderLabel, projektLabel; // vores labels
+	JTextField aktivitetNavn, medarbejderNavn, projektNavn, aktivitetID, medarbejderID, projektID; // vores text fields
+	JLabel aLabelNavn, mLabelNavn, pLabelNavn, aLabelID, mLabelID, pLabelID ; // vores labels
 	
 	public Main(){
 
         Dimension BSize = new Dimension(150, 25);
         Dimension TSize = new Dimension(500, 25);
-        Dimension spaceDimension = new Dimension(150, 10);
+        Dimension spaceDimension = new Dimension(250, 10);
         getContentPane().setLayout(new BorderLayout());
 
 
@@ -38,20 +38,34 @@ public class Main extends JFrame implements ActionListener{
         lavMedarbejder.setMaximumSize(BSize);
         lavMedarbejder.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        aktivitetT = new JTextField();
-        aktivitetT.setMaximumSize(TSize);
-        projektT = new JTextField();
-        projektT.setMaximumSize(TSize);
-        medarbejderT = new JTextField();
-        medarbejderT.setMaximumSize(TSize);
+        aktivitetNavn = new JTextField();
+        aktivitetNavn.setMaximumSize(TSize);
+        projektNavn = new JTextField();
+        projektNavn.setMaximumSize(TSize);
+        medarbejderNavn = new JTextField();
+        medarbejderNavn.setMaximumSize(TSize);
 
-        aktivietLabel = new JLabel("Indtast aktivitet");
-        aktivietLabel.setMaximumSize(BSize);
-        projektLabel = new JLabel("Indtast projekt");
-        projektLabel.setMaximumSize(BSize);
-        medarbejderLabel = new JLabel("Indtast medarbejder");
-        medarbejderLabel.setMaximumSize(BSize);
+        aktivitetID = new JTextField();
+        aktivitetID.setMaximumSize(TSize);
+        projektID = new JTextField();
+        projektID.setMaximumSize(TSize);
+        medarbejderID = new JTextField();
+        medarbejderID.setMaximumSize(TSize);
+        
+        aLabelNavn = new JLabel("Indtast aktivitet navn");
+        aLabelNavn.setMaximumSize(BSize);
+        pLabelNavn = new JLabel("Indtast projekt navn");
+        pLabelNavn.setMaximumSize(BSize);
+        mLabelNavn = new JLabel("Indtast medarbejder navn");
+        mLabelNavn.setMaximumSize(BSize);
 
+        aLabelID = new JLabel("Indtast aktivitet id");
+        aLabelID.setMaximumSize(BSize);
+        pLabelID = new JLabel("Indtast projekt id");
+        pLabelID.setMaximumSize(BSize);
+        mLabelID = new JLabel("Indtast medarbejder intialer");
+        mLabelID.setMaximumSize(BSize);
+        
         JPanel p1 = new JPanel();
         p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));
         p1. add(Box.createRigidArea(new Dimension(spaceDimension)));
@@ -61,46 +75,59 @@ public class Main extends JFrame implements ActionListener{
         p1. add(Box.createRigidArea(new Dimension(spaceDimension)));
         p1.add(lavMedarbejder);
 
-
         JPanel p2 = new JPanel();
         p2.setLayout(new BoxLayout(p2, BoxLayout.PAGE_AXIS));
-        p2. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p2.add(aktivietLabel);
-        p2. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p2.add(projektLabel);
-        p2. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p2.add(medarbejderLabel);
+        p2.add(Box.createRigidArea(new Dimension(spaceDimension)));
+        p2.add(aLabelID);
+        p2.add(aktivitetID);
+        p2.add(Box.createRigidArea(new Dimension(spaceDimension)));
+        p2.add(mLabelID);
+        p2.add(projektID);
+        p2.add(Box.createRigidArea(new Dimension(spaceDimension)));
+        p2.add(pLabelID);
+        p2.add(medarbejderID);
 
         JPanel p3 = new JPanel();
         p3.setLayout(new BoxLayout(p3, BoxLayout.PAGE_AXIS));
-        p3. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p3.add(aktivitetT);
-        p3. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p3.add(projektT);
-        p3. add(Box.createRigidArea(new Dimension(spaceDimension)));
-        p3.add(medarbejderT);
+        p3.add(Box.createRigidArea(new Dimension(spaceDimension)));
+        p3.add(aLabelNavn);
+        p3.add(aktivitetNavn);
+        p3.add(Box.createRigidArea(new Dimension(spaceDimension)));
+        p3.add(pLabelNavn);
+        p3.add(projektNavn);
+        p3.add(Box.createRigidArea(new Dimension(spaceDimension)));
+        p3.add(mLabelNavn);
+        p3.add(medarbejderNavn);
+        
 
         getContentPane().add(p1, BorderLayout.EAST);
-        getContentPane().add(p2, BorderLayout.WEST);
-        getContentPane().add(p3, BorderLayout.CENTER);
-
+        getContentPane().add(p2, BorderLayout.CENTER);
+        getContentPane().add(p3, BorderLayout.WEST);
+        
         
     }
 	
 	 public void actionPerformed( ActionEvent e) {
 
 	   if (e.getSource() == lavAktivitet) {
-	       String text = aktivitetT.getText();
-	           
-	       }
+		   
+		   if(aktivitetNavn.getText().length() != 0 && aktivitetID.getText().length() != 0){
+			   String navn = aktivitetNavn.getText();
+		       String id = aktivitetID.getText();
+		       Aktivitet aktivitet = new Aktivitet(navn,id);   
+		       System.out.println(navn + id);
+		   }
+	       
+	       
+	   }
 
 	   if (e.getSource() == lavMedarbejder) {
-	       String text = medarbejderT.getText();
+	       String text = medarbejderNavn.getText();
 	             
 	       }
 	             
 	   if (e.getSource() == lavProjekt) {
-	       String text = projektT.getText();
+	       String text = projektNavn.getText();
 	          
 	      }
 	 }
