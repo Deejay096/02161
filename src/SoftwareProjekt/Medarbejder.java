@@ -1,5 +1,8 @@
 package SoftwareProjekt;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Medarbejder extends Oprettelse {
 	public String Navn;
 	public String Intialer;
@@ -8,9 +11,8 @@ public class Medarbejder extends Oprettelse {
 	public String CPR;
 	public Boolean Projektleder;
 	
-	// Tidsregistrering 
-	public static String[] søjleNavne = {"Navn","Intialer","CPR","Månede","Uge","dato","Tid"};
-	
+	public List<TimeObjekt> Syg =  new ArrayList<>();
+	public List<TimeObjekt> Ferie =  new ArrayList<>();
 	
 	public Medarbejder(String Navn, String Intialer, String Tlf, String Email, String CPR,Boolean Projektleder) {
 		this.CPR = CPR;
@@ -21,22 +23,21 @@ public class Medarbejder extends Oprettelse {
 		this.Projektleder = Projektleder;
 	}
 	
-	public void Aktivitet (String etellerandet){
-		//Noget der hente en liste
-		//Skal kunne registrer tid under en specefik aktivitet 
-		//Lave tidsregistrering ugevis?
-		
-		
-		
-		//Muligheder:
-		//boolean
-		//x = x + etellerandet;
-	}
-	public static void main(String[]args){
-		
+	public void tidSyg(Medarbejder m,int tid){
+		for(TimeObjekt q: Syg) {
+			if(q.getMedarbejder() == m){
+				q.updateTid(tid);
+				break;
+			}
+		}
 	}
 	
-	
-		
-
+	public void tidFerie(Medarbejder m,int tid){
+		for(TimeObjekt q: Ferie) {
+			if(q.getMedarbejder() == m){
+				q.updateTid(tid);
+				break;
+			}
+		}
+	}
 }

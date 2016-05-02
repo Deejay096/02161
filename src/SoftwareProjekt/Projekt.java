@@ -8,9 +8,9 @@ public class Projekt{
 	String Navn;
 	String index;
 	Aktivitet aktivitet;
-	
+
 	List<Aktivitet> projektAktivitetList  = new ArrayList<Aktivitet>(); 
-	
+
 	public Projekt(String navn, String index){
 		this.index = index;
 		this.Navn = navn;
@@ -20,13 +20,19 @@ public class Projekt{
 		aktivitet = opret.opretAktivitet(Navn, Index);
 		projektAktivitetList.add(aktivitet);
 	}
-	
+	public void sdfsd(String Navn, String Intialer, String Tlf, String Email, String CPR,Boolean Projektleder){
+		Oprettelse opret = new Oprettelse();
+		Medarbejder newMed = opret.opretMedarbejder(Navn,Intialer,Tlf,Email,CPR,Projektleder);
+		Aktivitet newAk = opret.opretAktivitet(Navn, Index);
+		Projekt newpro = opret.opretProjekt(Navn, Index);
+	}
+
 	public Aktivitet getProjekt(String projektnavn,String index){
 		if(projektAktivitetList.contains(index) == true || projektAktivitetList.contains(projektnavn) == true ){
 			for (Aktivitet A: projektAktivitetList )
-			if(A.equals(index)){
-				return A;
-			}
+				if(A.equals(index)){
+					return A;
+				}
 			for (Aktivitet A: projektAktivitetList )
 				if(A.equals(projektnavn)){
 					return A;
@@ -41,38 +47,14 @@ public class Projekt{
 		}
 	}
 
-	public void Sorter(){
-		if(projektAktivitetList.isEmpty() == false){
-			
-		}
-	}
-
-	public void soege(String name)
-	{	
-		int i = projektAktivitetList.indexOf(name)+1;
-		
-		if(i <= projektAktivitetList.size()-1)
-		{
-			if(projektAktivitetList.contains(projektAktivitetList.get(i)) == true)
-			{
-				System.out.println("vis aktivit på en mystisk måde.");
+	public Aktivitet soege(Aktivitet A){
+		for(Aktivitet q: projektAktivitetList ) {
+			if(q.equals(A)){
+				System.out.println("Din aktivitet er fundet" + A);
+				return A;
 			}
 		}
-		else
-		{
-			System.out.println("Dit søgte aktivitet findes ikke, ^-^ hahaha");
-		}
-	}
-
-	public void main(String[] args)
-	{
-//		LavAktivitet("hi", "1");
-//		LavAktivitet("nice", "2");
-//		LavAktivitet("it work", "2");
-//		VisAktivitetsListe();
-//		soege("hey");
-//		Sorter();
-
-		
+		System.out.println("Din Aktivitet kunne ikke findes");
+		return null;
 	}
 }
