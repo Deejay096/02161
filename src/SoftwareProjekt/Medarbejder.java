@@ -23,6 +23,8 @@ public class Medarbejder extends Oprettelse {
 		this.Projektleder = Projektleder;
 	}
 	
+	
+	
 	public void tidSyg(Medarbejder m,int tid){
 		for(TimeObjekt q: Syg) {
 			if(q.getMedarbejder() == m){

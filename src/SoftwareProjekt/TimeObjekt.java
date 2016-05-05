@@ -1,6 +1,10 @@
 package SoftwareProjekt;
 
 public class TimeObjekt {
+	public TimeObjekt(Medarbejder m,int tid){
+		this.m = m;
+		this.tid = tid;
+	}	
 	private int tid;
 	private Medarbejder m;
 
