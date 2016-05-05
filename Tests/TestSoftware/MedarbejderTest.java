@@ -1,7 +1,6 @@
 package TestSoftware;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 import SoftwareProjekt.Medarbejder;
