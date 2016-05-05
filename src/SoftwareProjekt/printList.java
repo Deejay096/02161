@@ -4,8 +4,8 @@ import java.util.List;
 
 public class printList {
 
-	static Oprettelse opret = new Oprettelse();
-	public static List<Medarbejder> medarbejderList = opret.getmedarbejderList();
+//	static Oprettelse opret = new Oprettelse();
+	public static List<Medarbejder> medarbejderList = Main.getmedarbejderList();
 
 	public void printMedarbejderList(){
 		if (medarbejderList.size() == 0){

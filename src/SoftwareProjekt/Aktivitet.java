@@ -10,7 +10,7 @@ public class Aktivitet {
 	public String index;
 
 	public static Oprettelse opret = new Oprettelse();
-	public static List<Medarbejder> list = opret.getmedarbejderList();
+	public static List<Medarbejder> list = Main.getmedarbejderList();
 
 	public static void main(String args[]){
 		Medarbejder k = opret.opretMedarbejder("Kristian Krarup", "KK", "23346859", "s144122@student.dtu.dk", "120894-xxxx", true);

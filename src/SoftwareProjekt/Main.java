@@ -9,12 +9,12 @@ public class Main
 {
 	List<Projekt> projektListe = new ArrayList<Projekt>();
 	
-	public List<Medarbejder> medarbejderList = new ArrayList<>();
+	public static List<Medarbejder> medarbejderList = new ArrayList<>();
 	public List<Aktivitet> aktivitetList = new ArrayList<>();
 	public List<Projekt> projektList = new ArrayList<>();
 	
-	public List<Medarbejder> getmedarbejderList() {
-	    return this.medarbejderList;
+	public static List<Medarbejder> getmedarbejderList() {
+	    return medarbejderList;
 	}
 	public List<Aktivitet> getaktivitetList() {
 	    return this.aktivitetList;
@@ -22,18 +22,17 @@ public class Main
 	public List<Projekt> getprojektList() {
 	    return this.projektList;
 	}
+	public static void tilføjMedarbejderList(Medarbejder medarbejder){
+		medarbejderList.add(medarbejder);	
+	}
 	
 	
 	public static void main(String[] args){
-		String navn = "din mor";
-		String ini = "mor";
-		String tlf = "kage";
-		String Em = "god";
-		String cpr = "din mor";
 		Oprettelse op = new Oprettelse();
-		op.opretMedarbejder(navn, ini, tlf, Em, cpr, true);
-		
-		op.opretMedarbejder("Kristian Krarup", "KK", "23346859", "s144122@student.dtu.dk", "120894-xxxx", true);
+		Medarbejder m = op.opretMedarbejder("Kristian Krarup", "KK", "23346859", "s144122@student.dtu.dk", "120894-xxxx", true);
+		Medarbejder m1 = op.opretMedarbejder("Kristian Krarup", "KK2", "23346859", "s144122@student.dtu.dk", "120894-xxxx", true);
+		tilføjMedarbejderList(m);
+		tilføjMedarbejderList(m1);
 		
 		printList print = new printList();
 		print.printMedarbejderList();
