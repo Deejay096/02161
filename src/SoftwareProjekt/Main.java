@@ -158,8 +158,8 @@ public class Main extends JFrame implements ActionListener {
 		      String cpr = medCPR.getText();
 		      String TLF = medTLF.getText();
 		      String Email = medEmail.getText();
-		      Medarbejder medarbejder = new Medarbejder(navn,id, cpr,TLF,Email,null); 
-		      outputTekst.setText("Du har lavet aktiviteten: " + navn + " med ID: " + id + " med CPR nr.: " + cpr + " med Telefon nr.: " + TLF + " med e-mail: " + Email);
+		      Medarbejder medarbejder = new Medarbejder(navn,id,TLF,Email,cpr,false); 
+		      outputTekst.setText("Du har lavet aktiviteten: " + navn + " med ID: " + id + " med Telefon nr.: " + TLF + " med e-mail: " + Email + " med CPR nr.: " + cpr);
 		      
 		   }  
 		   if(medarbejderNavn.getText().length() == 0)
