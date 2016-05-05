@@ -14,7 +14,8 @@ public class opretGUI extends JFrame implements ActionListener
 	JTextField aktivitetNavn, medarbejderNavn, projektNavn, aktivitetID, medarbejderID, projektID, medCPR, medTLF, medEmail, outputTekst; // vores text fields
 	JLabel aLabelNavn, mLabelNavn, pLabelNavn, aLabelID, mLabelID, pLabelID, mLabelCPR, mLabelTLF, mLabelEmail ; // vores labels
 	
-	public opretGUI(){
+	public opretGUI()
+	{
 
         Dimension BSize = new Dimension(200, 25);
         Dimension TSize = new Dimension(300, 25);
