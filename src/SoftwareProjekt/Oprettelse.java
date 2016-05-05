@@ -12,20 +12,6 @@ public class Oprettelse {
 	
 	Main main = new Main();
 	
-//	public List<Medarbejder> medarbejderList = new ArrayList<>();
-//	public List<Aktivitet> aktivitetList = new ArrayList<>();
-//	public List<Projekt> projektList = new ArrayList<>();
-	
-//	public List<Medarbejder> getmedarbejderList() {
-//	    return this.medarbejderList;
-//	}
-//	public List<Aktivitet> getaktivitetList() {
-//	    return this.aktivitetList;
-//	}
-//	public List<Projekt> getprojektList() {
-//	    return this.projektList;
-//	}
-
 	//Vi opretter en medarbejder class med (String Navn,String Intialer,String Telefonnummer,String Email,String CPR)
 	public Medarbejder opretMedarbejder(String Navn,String Intialer,String Tlf,String Email,String CPR, Boolean Projektleder){
 		Medarbejder medarbejder = new Medarbejder(Navn,Intialer,Tlf,Email,CPR,Projektleder);
