@@ -8,7 +8,7 @@ public class Login {
 	
 	
 	public boolean projektlederlogin(String intialer ){
-		for(int i = 0; i < list.size()-1; i++){
+		for(int i = 0; i < list.size(); i++){
 			if ((list.get(i).Intialer.equals(intialer))){// && (list.get(i).Projektleder == true)){
 				System.out.println(list.get(i).Intialer);
 				return true;

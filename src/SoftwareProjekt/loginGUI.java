@@ -67,7 +67,6 @@ public class loginGUI extends JFrame implements ActionListener
 		        frame.setResizable(true);
 		        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		        frame.setVisible(true);	
-		        System.out.println("yes");
 			}
 		}
 	

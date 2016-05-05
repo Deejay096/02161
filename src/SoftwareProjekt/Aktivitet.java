@@ -12,15 +12,6 @@ public class Aktivitet {
 	public static Oprettelse opret = new Oprettelse();
 	public static List<Medarbejder> list = Main.getmedarbejderList();
 
-	public static void main(String args[]){
-		Medarbejder k = opret.opretMedarbejder("Kristian Krarup", "KK", "23346859", "s144122@student.dtu.dk", "120894-xxxx", true);
-		Medarbejder d = opret.opretMedarbejder("Dejar Tarik", "DT", "42723071", "s154414@student.dtu.dk", "301196-xxxx", false);
-
-		TilfoejMedarbejder(k);
-		TilfoejMedarbejder(d);
-		PrintTimeObjekt(to);
-	}
-
 	public Aktivitet(String navn, String index)	{
 		this.Navn = navn;
 		this.index = index;
