@@ -20,12 +20,6 @@ public class Projekt{
 		aktivitet = opret.opretAktivitet(Navn, Index);
 		projektAktivitetList.add(aktivitet);
 	}
-	public void sdfsd(String Navn, String Intialer, String Tlf, String Email, String CPR,Boolean Projektleder){
-		Oprettelse opret = new Oprettelse();
-		Medarbejder newMed = opret.opretMedarbejder(Navn,Intialer,Tlf,Email,CPR,Projektleder);
-		Aktivitet newAk = opret.opretAktivitet(Navn, Index);
-		Projekt newpro = opret.opretProjekt(Navn, Index);
-	}
 
 	public Aktivitet getProjekt(String projektnavn,String index){
 		if(projektAktivitetList.contains(index) == true || projektAktivitetList.contains(projektnavn) == true ){
