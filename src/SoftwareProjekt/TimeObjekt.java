@@ -5,8 +5,8 @@ public class TimeObjekt {
 		this.m = m;
 		this.tid = tid;
 	}	
-	private int tid;
-	private Medarbejder m;
+	public int tid;
+	public Medarbejder m;
 
 	public void updateTid(int tid) {
 		this.tid = this.tid + tid;
@@ -14,5 +14,17 @@ public class TimeObjekt {
 
 	public Medarbejder getMedarbejder() {
 		return m;
+	}
+	
+	public int getTid(){
+		return tid;
+	}
+	
+	public String toString() {
+		return (this.m.getNavn()+
+				this.m.getIntialer() +
+				this.m.getTlf() +
+				this.m.getEmail()+
+				this.getTid());
 	}
 }

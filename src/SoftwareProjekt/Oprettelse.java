@@ -10,13 +10,13 @@ public class Oprettelse {
 	public String CPR;
 	public String Index;
 
-	public List<Medarbejder> medarbejderList = new ArrayList<>();
+	public static List<Medarbejder> medarbejderList = new ArrayList<>();
 	public List<Aktivitet> aktivitetList = new ArrayList<>();
 	public List<Projekt> projektList = new ArrayList<>();
 	
 	
 	public List<Medarbejder> getmedarbejderList() {
-	    return this.medarbejderList;
+	    return Oprettelse.medarbejderList;
 	}
 	public List<Aktivitet> getaktivitetList() {
 	    return this.aktivitetList;
@@ -48,6 +48,12 @@ public class Oprettelse {
 			System.out.println("Medarbejder findes ikke: Tjek Navn og CPR-nummer igen");
 		}
 	}
+	public static void PrintMedarbejderList(List<TimeObjekt> liste){
+		for(int i = 0; i < medarbejderList.size(); i++) {
+			System.out.println(medarbejderList.get(i).getNavn() + " | " + medarbejderList.get(i).Intialer + " | "  + medarbejderList.get(i).getTlf() + " | "  + medarbejderList.get(i).getEmail() + " | "  + medarbejderList.get(i).getCPR() + " | "  + medarbejderList.get(i).getProjektleder());
+		}
+	}
+	
 
 	//Vi opretter et projekt class med (String Navn,String Index)
 	public Projekt opretProjekt(String Navn, String Index){
@@ -94,4 +100,5 @@ public class Oprettelse {
 			System.out.println("Aktiviteten findes ikke: Tjek Navn og index-nummer igen");
 		}
 	}
+	
 }

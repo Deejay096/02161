@@ -7,7 +7,7 @@ public class Login {
 
 	
 	public boolean projektlederlogin(String intialer ){
-		opret = new Oprettelse();
+		Oprettelse opret = new Oprettelse();
 		List<Medarbejder> list = opret.getmedarbejderList();
 
 		if (list.contains(intialer) == true){

@@ -15,14 +15,31 @@ public class Medarbejder extends Oprettelse {
 	public List<TimeObjekt> Ferie =  new ArrayList<>();
 	
 	public Medarbejder(String Navn, String Intialer, String Tlf, String Email, String CPR,Boolean Projektleder) {
-		this.CPR = CPR;
-		this.Email = Email;
+		this.Navn = Navn;
 		this.Intialer = Intialer;
 		this.Tlf = Tlf;
-		this.Navn = Navn;
+		this.Email = Email;
+		this.CPR = CPR;
 		this.Projektleder = Projektleder;
 	}
-	
+	public String getNavn(){
+		return Navn;
+	}
+	public String getIntialer(){
+		return Intialer;
+	}
+	public String getTlf(){
+		return Tlf;
+	}
+	public String getEmail(){
+		return Email;
+	}
+	public String getCPR(){
+		return CPR;
+	}
+	public boolean getProjektleder(){
+		return Projektleder;
+	}
 	
 	
 	public void tidSyg(Medarbejder m,int tid){

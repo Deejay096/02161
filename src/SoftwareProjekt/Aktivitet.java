@@ -5,17 +5,23 @@ import java.util.List;
 
 public class Aktivitet {
 	public String Navn; 
-	public double Tid; 
+	public double Tid;
 	public static List<TimeObjekt> to =  new ArrayList<>();
 	public String index;
+	
+	public static Oprettelse opret = new Oprettelse();
+	public static List<Medarbejder> list = opret.getmedarbejderList();
 
-	public static void main(String args[]){
-		Medarbejder h = new Medarbejder("Hej", "hej", "123", "he@hot.dk", "12345678", false);
-		TimeObjekt t = new TimeObjekt(h,5);
-		TilfoejMedarbejder(t);
-
-		PrintMedarbejderList(to);
-	}
+//	public static void main(String args[]){
+//		Medarbejder k = opret.opretMedarbejder("Kristian Krarup", "KK", "23346859", "s144122@student.dtu.dk", "120894-xxxx", true);
+//		Medarbejder d = opret.opretMedarbejder("Dejar Tarik", "DT", "42723071", "s154414@student.dtu.dk", "301196-xxxx", false);
+//		
+//		TimeObjekt kk = new TimeObjekt(k,5);
+//		TimeObjekt dd = new TimeObjekt(d,5);
+//		TilfoejMedarbejder(kk);
+//		TilfoejMedarbejder(dd);
+//		PrintTimeObjekt(to);
+//	}
 
 	public Aktivitet(String navn, String index)	{
 		this.Navn = navn;
@@ -36,15 +42,13 @@ public class Aktivitet {
 	}
 
 	public static void TilfoejMedarbejder(TimeObjekt Medarbejder){
-		to.add(Medarbejder);
-
-
-		//		if(to.contains(Medarbejder)){
-		//			to.add(Medarbejder); 
-		//		}
-		//		else{
-		//			System.out.println("FEJL: Medarbejderen du prøver at tilføje til aktiviteten er ikke i listen over medarbejder.");
-		//		}
+		to.add(Medarbejder); 
+//		if(list.contains(Medarbejder)){
+//			to.add(Medarbejder); 
+//		}
+//		else{
+//			System.out.println("FEJL: Medarbejderen du prøver at tilføje til aktiviteten er ikke i listen over medarbejder.");
+//		}
 	}
 
 	public void FjernMedarbejder(TimeObjekt Medarbejder){
@@ -55,24 +59,9 @@ public class Aktivitet {
 		}
 
 	}
-	public String toString() {
-		return ("Navn:"+this.getName()+
-				" Student No: "+ this.getEmail() +
-				" Email: "+ this.getEmail() +
-				" Year : " + this.getYear());
-	}
-	public Medarbejder(String Navn, String Intialer, String Tlf, String Email, String CPR,Boolean Projektleder) {
-		this.CPR = CPR;
-		this.Email = Email;
-		this.Intialer = Intialer;
-		this.Tlf = Tlf;
-		this.Navn = Navn;
-		this.Projektleder = Projektleder;
-	}
-	public static void PrintMedarbejderList(List<TimeObjekt> liste){
-
-		for(TimeObjekt q: to) {
-			System.out.println(q);
+	public static void PrintTimeObjekt(List<TimeObjekt> liste){
+		for(int i = 0; i < to.size(); i++) {
+			System.out.println(to.get(i).m.getNavn() + " | " + to.get(i).m.Intialer + " | "  + to.get(i).m.getTlf() + " | "  + to.get(i).m.getEmail() + " | "  + to.get(i).m.getCPR() + " | "  + to.get(i).m.getProjektleder() + " | " + to.get(i).getTid() );
 		}
 	}
 
