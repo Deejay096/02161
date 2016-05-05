@@ -15,6 +15,13 @@ public class Projekt{
 		this.index = index;
 		this.Navn = navn;
 	}
+	public String getNavnP(){
+		return Navn;
+	}
+	public String getIndexP(){
+		return index;
+	}
+	
 	public void tilføjAktivitet(String Navn, String Index){
 		Oprettelse opret = new Oprettelse();
 		aktivitet = opret.opretAktivitet(Navn, Index);
@@ -37,7 +44,7 @@ public class Projekt{
 
 	public void visProjektAktivitetList(){
 		for(Aktivitet aktivitet: projektAktivitetList){
-			System.out.println(aktivitet.getName());
+			System.out.println(aktivitet.getNavnA());
 		}
 	}
 

@@ -5,22 +5,20 @@ import java.util.List;
 
 import javax.swing.JFrame;
 
-public class Main 
-{
-	List<Projekt> projektListe = new ArrayList<Projekt>();
+public class Main{
 	
 	public static List<Medarbejder> medarbejderList = new ArrayList<>();
-	public List<Aktivitet> aktivitetList = new ArrayList<>();
-	public List<Projekt> projektList = new ArrayList<>();
+	public static List<Aktivitet> aktivitetList = new ArrayList<>();
+	public static List<Projekt> projektList = new ArrayList<>();
 	
 	public static List<Medarbejder> getmedarbejderList() {
 	    return medarbejderList;
 	}
-	public List<Aktivitet> getaktivitetList() {
-	    return this.aktivitetList;
+	public static List<Aktivitet> getaktivitetList() {
+	    return aktivitetList;
 	}
-	public List<Projekt> getprojektList() {
-	    return this.projektList;
+	public static List<Projekt> getprojektList() {
+	    return projektList;
 	}
 	public static void tilføjMedarbejderList(Medarbejder medarbejder){
 		medarbejderList.add(medarbejder);	
@@ -47,12 +45,12 @@ public class Main
 	}
 	
 	public Projekt getProjekt(String projektnavn,String index){
-		if(projektListe.contains(index) == true || projektListe.contains(projektnavn) == true ){
-			for (Projekt p: projektListe )
+		if(projektList.contains(index) == true || projektList.contains(projektnavn) == true ){
+			for (Projekt p: projektList )
 			if(p.equals(index)){
 				return p;
 			}
-			for (Projekt p: projektListe )
+			for (Projekt p: projektList )
 				if(p.equals(projektnavn)){
 					return p;
 				}

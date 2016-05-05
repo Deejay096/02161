@@ -17,8 +17,11 @@ public class Aktivitet {
 		this.index = index;
 	}
 
-	public String getName()	{
+	public String getNavnA()	{
 		return Navn;
+	}
+	public String getIndexA()	{
+		return index;
 	}
 
 	public void TidsRegistrering(Medarbejder m,int tid){
