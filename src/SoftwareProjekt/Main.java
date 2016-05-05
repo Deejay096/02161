@@ -10,7 +10,7 @@ public class Main extends JFrame implements ActionListener {
 	List<Projekt> projektListe = new ArrayList<Projekt>();
 	
 	JButton lavAktivitet, lavMedarbejder, lavProjekt; // vores knapper
-	JTextField aktivitetNavn, medarbejderNavn, projektNavn, aktivitetID, medarbejderID, projektID, medCPR, medTLF, medEmail; // vores text fields
+	JTextField aktivitetNavn, medarbejderNavn, projektNavn, aktivitetID, medarbejderID, projektID, medCPR, medTLF, medEmail, outputTekst; // vores text fields
 	JLabel aLabelNavn, mLabelNavn, pLabelNavn, aLabelID, mLabelID, pLabelID, mLabelCPR, mLabelTLF, mLabelEmail ; // vores labels
 	
 	public Main(){
@@ -42,6 +42,8 @@ public class Main extends JFrame implements ActionListener {
         medarbejderNavn = new JTextField();
         medarbejderNavn.setMaximumSize(TSize);
 
+        outputTekst = new JTextField();
+        outputTekst.setSize(80, 50);
         aktivitetID = new JTextField();
         aktivitetID.setMaximumSize(TSize);
         projektID = new JTextField();
@@ -107,6 +109,8 @@ public class Main extends JFrame implements ActionListener {
         p2.add(medEmail);
         p2.add(Box.createRigidArea(new Dimension(spaceDimension)));
         p2.add(lavMedarbejder);
+        p2.add(Box.createRigidArea(new Dimension(spaceDimension)));
+        p2.add(outputTekst);
         
         JPanel p3 = new JPanel();
         p3.setLayout(new BoxLayout(p3, BoxLayout.PAGE_AXIS));
@@ -126,22 +130,58 @@ public class Main extends JFrame implements ActionListener {
 	
 	 public void actionPerformed( ActionEvent e) {
 
-	   if (e.getSource() == lavAktivitet) {
-		   if(aktivitetNavn.getText().length() != 0 && aktivitetID.getText().length() != 0){
+	   if (e.getSource() == lavAktivitet)
+	   {
+		   if(aktivitetNavn.getText().length() != 0 && aktivitetID.getText().length() != 0)
+		   {
 			   String navn = aktivitetNavn.getText();
 		       String id = aktivitetID.getText();
 		       Aktivitet aktivitet = new Aktivitet(navn,id);   
-		       System.out.println(navn + " " + id);
+		       outputTekst.setText("Du har lavet aktiviteten: " + navn + " med ID: " + id);
+		   }
+		   if(aktivitetNavn.getText().length() == 0)
+		   {
+			   aktivitetNavn.setText("mangler at blive udfyldt");
+		   }
+		   if(aktivitetID.getText().length() == 0)
+		   {
+			   aktivitetID.setText("mangler at blive udfyldt");
 		   }
 	   }
 
-	   if (e.getSource() == lavMedarbejder){
-		   if(medarbejderNavn.getText().length() != 0 && medarbejderID.getText().length() != 0){
+	   if (e.getSource() == lavMedarbejder)
+	   {
+		   if(medarbejderNavn.getText().length() != 0 && medarbejderID.getText().length() != 0 && medCPR.getText().length() != 0 && medTLF.getText().length() != 0 && medEmail.getText().length() != 0)
+		   {
 		      String navn = medarbejderNavn.getText();
 		      String id = medarbejderID.getText();
-		      Medarbejder medarbejder = new Medarbejder(navn,id, null,null,null,null);   
-		      System.out.println(navn + " " + id);
-		   }   
+		      String cpr = medCPR.getText();
+		      String TLF = medTLF.getText();
+		      String Email = medEmail.getText();
+		      Medarbejder medarbejder = new Medarbejder(navn,id, cpr,TLF,Email,null); 
+		      outputTekst.setText("Du har lavet aktiviteten: " + navn + " med ID: " + id + " med CPR nr.: " + cpr + " med Telefon nr.: " + TLF + " med e-mail: " + Email);
+		      
+		   }  
+		   if(medarbejderNavn.getText().length() == 0)
+		   {
+			   medarbejderNavn.setText("mangler at blive udfyldt");
+		   }
+		   if(medarbejderID.getText().length() == 0)
+		   {
+			   medarbejderID.setText("mangler at blive udfyldt");
+		   }
+		   if(medCPR.getText().length() == 0)
+		   {
+			   medCPR.setText("mangler at blive udfyldt");
+		   }
+		   if(medTLF.getText().length() == 0)
+		   {
+			   medTLF.setText("mangler at blive udfyldt");
+		   }
+		   if(medEmail.getText().length() == 0)
+		   {
+			   medEmail.setText("mangler at blive udfyldt");
+		   }
 	   }
 	             
 	   if (e.getSource() == lavProjekt)
@@ -151,7 +191,15 @@ public class Main extends JFrame implements ActionListener {
 			   String navn = projektNavn.getText();
 		       String id = projektID.getText();
 		       Projekt projekt = new Projekt(navn,id);   
-		       System.out.println(navn + " " + id);
+		       outputTekst.setText("Du har lavet projektet: " + navn + " med ID: " + id);
+		   }
+		   if(projektNavn.getText().length() == 0)
+		   {
+			   projektNavn.setText("mangler at blive udfyldt");
+		   }
+		   if(projektID.getText().length() == 0)
+		   {
+			   projektID.setText("mangler at blive udfyldt");
 		   }
 	   }
 	 }
