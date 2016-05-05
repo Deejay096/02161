@@ -6,9 +6,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+//Lavet af Jackie Vuong: studie nr. s153121 
+
 public class opretGUI extends JFrame implements ActionListener 
 {
-	
 	JButton lavAktivitet, lavMedarbejder, lavProjekt; // vores knapper
 	JTextField aktivitetNavn, medarbejderNavn, projektNavn, aktivitetID, medarbejderID, projektID, medCPR, medTLF, medEmail, outputTekst; // vores text fields
 	JLabel aLabelNavn, mLabelNavn, pLabelNavn, aLabelID, mLabelID, pLabelID, mLabelCPR, mLabelTLF, mLabelEmail ; // vores labels
@@ -203,15 +204,5 @@ public class opretGUI extends JFrame implements ActionListener
 		   }
 	   }
 	 }
-	
-	public static void main(String[] args){
-		opretGUI frame = new opretGUI();
-        frame.setTitle("softwareudviklingsprojekter");
-        frame.setSize(1000, 560);
-        frame.setResizable(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);	
-	}
-
 	
 }
