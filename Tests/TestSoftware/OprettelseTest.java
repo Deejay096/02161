@@ -1,45 +1,64 @@
-package TestSoftware;
+package SoftwareProjekt;
+
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import SoftwareProjekt.Aktivitet;
-import SoftwareProjekt.Oprettelse;
+
+public class oprettelseTest {
+	Oprettelse op = new Oprettelse();
+	Medarbejder testM = op.opretMedarbejder("Test1", "test1", "00000000", "s@student.dtu.dk", "xxxxxx-xxxx", true);
+	Aktivitet TestA = op.opretAktivitet("TestA", "1");
+	Projekt TestP = op.opretProjekt("testP", "123");
+	Aktivitet akt1 = op.opretAktivitet("Aktivitet1", "2");
+
+	@Test
+	public void opretMedarbejderTest(){
+		assertEquals("Test1", Medarbejder.getNavn());
+		assertEquals("test1", Medarbejder.getIntialer());
+		assertEquals("00000000", Medarbejder.getTlf());
+		assertEquals("xxxxxx-xxxx", Medarbejder.getCPR());
+		assertEquals(true, Medarbejder.getProjektleder());
+	}
+
+	@Test
+	public void fjernMedarbejderTest(){
+		op.FjernMedarbejder(testM);
+		assertNotSame("Test1", Medarbejder.getNavn());
+		assertNotSame("test1", Medarbejder.getIntialer());
+		assertNotSame("00000000", Medarbejder.getTlf());
+		assertNotSame("xxxxxx-xxxx", Medarbejder.getCPR());
+	}
 
 
-public class OprettelseTest 
-{
-	Oprettelse opret = new Oprettelse();
-	
-	String Navn = "oprettelsex";
-	String Index = "30313233";
-	
 	@Test
-	public void OpretTest()
-	{
-		opret.opretAktivitet(Navn, Index);	
+	public void OpretProjektTest(){
+		assertEquals("testP", Projekt.getNavnP());
+		assertEquals("123", Projekt.getIndexP());
+
+	}
+
+
+	@Test
+	public void opretAktivietTest(){
+		assertEquals("TestA", Aktivitet.getNavnA());
+		assertEquals("1", Aktivitet.getIndexA());
 	}
 	
 	@Test
-	public void opretProjektAktivietTest(){
-		
-		String Navn2 = "Kryptering";
-		String Index2 = "1337";
-		
-		Oprettelse opretprojekt = new Oprettelse();
-		
-		opretprojekt.opretProjekt(Navn2, Index2);
-		
+	public void fjernProjektTest(){
+		op.FjernProjekt(TestP);
+		assertNotSame("testp",Projekt.getNavnP());
+		assertNotSame("123",Projekt.getIndexP());		
 	}
 	
-	@Test
-	public void fjernProjektAktivitetTest(){
-		
-		Oprettelse fjernprojekt = new Oprettelse();
-		
-		Aktivitet m = new Aktivitet(Navn,Index);
-		
-		fjernprojekt.FjernAktivitet(m);
-			
+	public void fjernAktivitetTest(){
+		op.FjernAktivitet(TestA);
+		assertNotSame("TestA",Aktivitet.getNavnA());
+		assertNotSame("1",Aktivitet.getIndexA());
 	}
+
+
+
 }
+
