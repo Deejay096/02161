@@ -4,23 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Aktivitet {
-	public String Navn; 
+	public static String Navn; 
 	public double Tid;
 	public static List<TimeObjekt> to =  new ArrayList<>();
-	public String index;
+	public static String index;
 
 	public static Oprettelse opret = new Oprettelse();
 	public static List<Medarbejder> list = Main.getmedarbejderList();
 
 	public Aktivitet(String navn, String index)	{
-		this.Navn = navn;
-		this.index = index;
+		Aktivitet.Navn = navn;
+		Aktivitet.index = index;
 	}
 
-	public String getNavnA()	{
+	public static String getNavnA()	{
 		return Navn;
 	}
-	public String getIndexA()	{
+	public static String getIndexA()	{
 		return index;
 	}
 
@@ -64,7 +64,7 @@ public class Aktivitet {
 		else{
 			for(int i = 0; i < to.size(); i++) {
 
-				System.out.println(to.get(i).m.getNavn() + " | " + to.get(i).m.Intialer + " | "  + to.get(i).m.getTlf() + " | "  + to.get(i).m.getEmail() + " | "  + to.get(i).m.getCPR() + " | "  + to.get(i).m.getProjektleder() + " | " + to.get(i).getTid() );
+				System.out.println(Medarbejder.getNavn() + " | " + Medarbejder.Intialer + " | "  + Medarbejder.getTlf() + " | "  + Medarbejder.getEmail() + " | "  + Medarbejder.getCPR() + " | "  + Medarbejder.getProjektleder() + " | " + to.get(i).getTid() );
 			}
 		}
 	}

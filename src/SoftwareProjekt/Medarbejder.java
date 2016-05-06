@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Medarbejder extends Oprettelse {
-	public String Navn;
-	public String Intialer;
-	public String Tlf;
-	public String Email;
-	public String CPR;
-	public Boolean Projektleder;
+	public static String Navn;
+	public static String Intialer;
+	public static String Tlf;
+	public static String Email;
+	public static String CPR;
+	public static Boolean Projektleder;
 
 	public static List<TimeObjekt> Syg =  new ArrayList<>();
 	public static List<TimeObjekt> Ferie =  new ArrayList<>();
@@ -17,7 +17,7 @@ public class Medarbejder extends Oprettelse {
 
 	public void kopiList(){
 		if (Main.medarbejderList.size() == 0){
-			System.out.println("Der er ikke oprettet nogle medarbejdere");
+			System.out.println("Der er ikke oprettet nogle medarbejdere"); 
 		}
 
 		for(int i = 0; i < Main.medarbejderList.size(); i++) {
@@ -45,29 +45,29 @@ public class Medarbejder extends Oprettelse {
 	}
 
 	public Medarbejder(String Navn, String Intialer, String Tlf, String Email, String CPR,Boolean Projektleder) {
-		this.Navn = Navn;
-		this.Intialer = Intialer;
-		this.Tlf = Tlf;
-		this.Email = Email;
-		this.CPR = CPR;
-		this.Projektleder = Projektleder;
+		Medarbejder.Navn = Navn;
+		Medarbejder.Intialer = Intialer;
+		Medarbejder.Tlf = Tlf;
+		Medarbejder.Email = Email;
+		Medarbejder.CPR = CPR;
+		Medarbejder.Projektleder = Projektleder;
 	}
-	public String getNavn(){
+	public static String getNavn(){
 		return Navn;
 	}
-	public String getIntialer(){
+	public static String getIntialer(){
 		return Intialer;
 	}
-	public String getTlf(){
+	public static String getTlf(){
 		return Tlf;
 	}
-	public String getEmail(){
+	public static String getEmail(){
 		return Email;
 	}
-	public String getCPR(){
+	public static String getCPR(){
 		return CPR;
 	}
-	public boolean getProjektleder(){
+	public static boolean getProjektleder(){
 		return Projektleder;
 	}
 

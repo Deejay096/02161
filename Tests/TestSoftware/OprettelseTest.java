@@ -1,11 +1,16 @@
-package SoftwareProjekt;
+package TestSoftware;
 
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import SoftwareProjekt.Aktivitet;
+import SoftwareProjekt.Medarbejder;
+import SoftwareProjekt.Oprettelse;
+import SoftwareProjekt.Projekt;
 
-public class oprettelseTest {
+
+public class OprettelseTest {
 	Oprettelse op = new Oprettelse();
 	Medarbejder testM = op.opretMedarbejder("Test1", "test1", "00000000", "s@student.dtu.dk", "xxxxxx-xxxx", true);
 	Aktivitet TestA = op.opretAktivitet("TestA", "1");
@@ -42,7 +47,7 @@ public class oprettelseTest {
 	@Test
 	public void opretAktivietTest(){
 		assertEquals("TestA", Aktivitet.getNavnA());
-		assertEquals("1", Aktivitet.getIndexA());
+		assertEquals("1", Aktivitet.getIndexA()); 
 	}
 	
 	@Test

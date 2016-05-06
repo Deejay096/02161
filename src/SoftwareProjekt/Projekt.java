@@ -5,20 +5,20 @@ import java.util.List;
 
 public class Projekt{
 
-	String Navn;
-	String index;
+	static String Navn;
+	static String index;
 	Aktivitet aktivitet;
 
 	List<Aktivitet> projektAktivitetList  = new ArrayList<Aktivitet>(); 
 
 	public Projekt(String navn, String index){
-		this.index = index;
-		this.Navn = navn;
+		Projekt.index = index;
+		Projekt.Navn = navn;
 	}
-	public String getNavnP(){
+	public static String getNavnP(){
 		return Navn;
 	}
-	public String getIndexP(){
+	public static String getIndexP(){
 		return index;
 	}
 	
@@ -44,7 +44,7 @@ public class Projekt{
 
 	public void visProjektAktivitetList(){
 		for(Aktivitet aktivitet: projektAktivitetList){
-			System.out.println(aktivitet.getNavnA());
+			System.out.println(Aktivitet.getNavnA());
 		}
 	}
 
