@@ -18,9 +18,11 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
+//Lavet af Jackie Vuong: studie nr. s153121 
+
 public class hovedGUI extends JFrame implements ActionListener
 {
-	JButton opretK, printK, tid; // vores knap
+	JButton opretK, printK, tid; // vores knapper
 	
 	public hovedGUI()
 	{
@@ -76,12 +78,14 @@ public class hovedGUI extends JFrame implements ActionListener
 		    frameOpret.setSize(1000, 560);
 		    frameOpret.setResizable(true);
 		    frameOpret.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		    frameOpret.setVisible(true);	
+		    frameOpret.setVisible(true);
+		    dispose();
 		}
 		
 		if(e.getSource() == tid)
 		{
 			
+			dispose();
 		}
 		
 		

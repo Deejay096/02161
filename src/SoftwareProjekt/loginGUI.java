@@ -17,6 +17,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+//Lavet af Jackie Vuong: studie nr. s153121 
+
 public class loginGUI extends JFrame implements ActionListener
 {
 	JButton logK; // vores knap
