@@ -43,7 +43,7 @@ public class printerGUI extends JFrame implements ActionListener
 	     printP.setAlignmentX(Component.CENTER_ALIGNMENT);
 	     
 	     printT = new JTextArea();
-	     printT.setSize(300, 100);
+	     printT.setSize(100, 100);
 	     
 	     JPanel p1 = new JPanel();
 	     p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));

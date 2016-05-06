@@ -57,36 +57,35 @@ public class hovedGUI extends JFrame implements ActionListener
 	{
 		if(e.getSource() == opretK)
 		{
-			
-			
 			opretGUI frameOpret = new opretGUI();
 		    frameOpret.setTitle("softwareudviklingsprojekter");
 		    frameOpret.setSize(1000, 560);
 		    frameOpret.setResizable(true);
 		    frameOpret.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		    frameOpret.setVisible(true);	
-		    dispose();
-		    
+		    dispose();   
 		}
 		
 		if(e.getSource() == printK)
 		{
-			printerGUI frameOpret = new printerGUI();
-		    frameOpret.setTitle("softwareudviklingsprojekter");
-		    frameOpret.setSize(1000, 560);
-		    frameOpret.setResizable(true);
-		    frameOpret.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		    frameOpret.setVisible(true);
+			printerGUI framePrinter = new printerGUI();
+		    framePrinter.setTitle("softwareudviklingsprojekter");
+		    framePrinter.setSize(1000, 560);
+		    framePrinter.setResizable(true);
+		    framePrinter.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		    framePrinter.setVisible(true);
 		    dispose();
 		}
 		
 		if(e.getSource() == tid)
 		{
-			
+			tidregGUI frameTidreg = new tidregGUI();
+		    frameTidreg.setTitle("softwareudviklingsprojekter");
+		    frameTidreg.setSize(1000, 560);
+		    frameTidreg.setResizable(true);
+		    frameTidreg.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		    frameTidreg.setVisible(true);
 			dispose();
 		}
-		
-		
 	}
-	
 }
