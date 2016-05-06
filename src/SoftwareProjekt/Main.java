@@ -27,12 +27,8 @@ public class Main{
 	
 	public static void main(String[] args){
 		Oprettelse op = new Oprettelse();
-		Medarbejder m = op.opretMedarbejder("Kristian Krarup", "KK", "23346859", "s144122@student.dtu.dk", "120894-xxxx", true);
-		Medarbejder m1 = op.opretMedarbejder("Kristian Krarup", "KK2", "23346859", "s144122@student.dtu.dk", "120894-xxxx", true);
-		
-		
-		printList print = new printList();
-		print.printMedarbejderList();
+		op.opretMedarbejder("Kristian Krarup", "KK", "23346859", "s144122@student.dtu.dk", "120894-xxxx", true);
+		op.opretMedarbejder("Boss Jackie", "JV", "23346859", "s153121@student.dtu.dk", "110094-xxxx", true);
 		
 		loginGUI frame = new loginGUI();
         frame.setTitle("softwareudviklingsprojekter");
@@ -40,7 +36,6 @@ public class Main{
         frame.setResizable(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);	
-        
 	}
 	
 	public Projekt getProjekt(String projektnavn,String index){
