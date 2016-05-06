@@ -9,7 +9,8 @@ public class Login {
 
 	public boolean projektlederlogin(String intialer){
 		for(int i = 0; i <= list.size(); i++){
-			if ((Medarbejder.Intialer == intialer) && (Medarbejder.Projektleder == true)){
+			if ((list.get(i).Intialer.equals(intialer) && (list.get(i).Projektleder == true)))
+			{
 				return true;
 			}
 		}
@@ -19,7 +20,8 @@ public class Login {
 
 	public boolean medarbejderlogin(String intialer){
 		for(int i = 0; i < list.size(); i++){
-			if ((Medarbejder.Intialer == intialer) && (Medarbejder.Projektleder == false)){
+			if ((list.get(i).Intialer.equals(intialer) && (list.get(i).Projektleder == true)))
+			{
 				return true;
 			}
 		}

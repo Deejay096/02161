@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Medarbejder extends Oprettelse {
 	public static String Navn;
-	public static String Intialer;
+	public String Intialer;
 	public static String Tlf;
 	public static String Email;
 	public static String CPR;
-	public static Boolean Projektleder;
+	public Boolean Projektleder;
 
 	public static List<TimeObjekt> Syg =  new ArrayList<>();
 	public static List<TimeObjekt> Ferie =  new ArrayList<>();
@@ -45,20 +45,20 @@ public class Medarbejder extends Oprettelse {
 	}
 
 	public Medarbejder(String Navn, String Intialer, String Tlf, String Email, String CPR,Boolean Projektleder) {
-		Medarbejder.Navn = Navn;
-		Medarbejder.Intialer = Intialer;
-		Medarbejder.Tlf = Tlf;
-		Medarbejder.Email = Email;
-		Medarbejder.CPR = CPR;
-		Medarbejder.Projektleder = Projektleder;
+		this.Navn = Navn;
+		this.Intialer = Intialer;
+		this.Tlf = Tlf;
+		this.Email = Email;
+		this.CPR = CPR;
+		this.Projektleder = Projektleder;
 	}
 	public static String getNavn(){
 		return Navn;
 	}
-	public static String getIntialer(){
+	public String getIntialer(){
 		return Intialer;
 	}
-	public static String getTlf(){
+	public String getTlf(){
 		return Tlf;
 	}
 	public static String getEmail(){
@@ -67,7 +67,7 @@ public class Medarbejder extends Oprettelse {
 	public static String getCPR(){
 		return CPR;
 	}
-	public static boolean getProjektleder(){
+	public boolean getProjektleder(){
 		return Projektleder;
 	}
 

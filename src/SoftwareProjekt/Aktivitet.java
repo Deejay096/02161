@@ -64,7 +64,7 @@ public class Aktivitet {
 		else{
 			for(int i = 0; i < to.size(); i++) {
 
-				System.out.println(Medarbejder.getNavn() + " | " + Medarbejder.Intialer + " | "  + Medarbejder.getTlf() + " | "  + Medarbejder.getEmail() + " | "  + Medarbejder.getCPR() + " | "  + Medarbejder.getProjektleder() + " | " + to.get(i).getTid() );
+				System.out.println(Medarbejder.getNavn() + " | " + list.get(i).getIntialer() + " | "  + list.get(i).getTlf() + " | "  + list.get(i).getEmail() + " | "  + list.get(i).getCPR() + " | "  + list.get(i).getProjektleder() + " | " + to.get(i).getTid() );
 			}
 		}
 	}
