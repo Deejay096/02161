@@ -58,6 +58,7 @@ public class hovedGUI extends JFrame implements ActionListener
 		if(e.getSource() == opretK)
 		{
 			
+			
 			opretGUI frameOpret = new opretGUI();
 		    frameOpret.setTitle("softwareudviklingsprojekter");
 		    frameOpret.setSize(1000, 560);

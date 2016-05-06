@@ -147,7 +147,7 @@ public class opretGUI extends JFrame implements ActionListener
 			   String navn = aktivitetNavn.getText();
 		       String id = aktivitetID.getText();
 		       op.opretAktivitet(navn, id);   
-		       outputTekst.setText("Du har lavet aktiviteten: " + navn + " med ID: " + id);
+		       outputTekst.append("Du har lavet aktiviteten: " + navn + " med ID: " + id+ "\n ");
 		   }
 		   if(aktivitetNavn.getText().length() == 0)
 		   {
@@ -169,7 +169,7 @@ public class opretGUI extends JFrame implements ActionListener
 		      String TLF = medTLF.getText();
 		      String Email = medEmail.getText();
 		      op.opretMedarbejder(navn,id,TLF,Email,cpr,false); 
-		      outputTekst.setText("Du har lavet medarbejder: " + navn + " med Initial: " + id + " med Telefon nr.: " + TLF + " med e-mail: " + Email + " med CPR nr.: " + cpr);
+		      outputTekst.append("Du har lavet medarbejder: " + navn + " med Initial: " + id + " med Telefon nr.: " + TLF + " med e-mail: " + Email + " med CPR nr.: " + cpr+ "\n ");
 		      
 		   }  
 		   if(medarbejderNavn.getText().length() == 0)
@@ -201,7 +201,7 @@ public class opretGUI extends JFrame implements ActionListener
 			   String navn = projektNavn.getText();
 		       String id = projektID.getText();
 		       op.opretProjekt(navn, id);
-		       outputTekst.setText("Du har lavet projektet: " + navn + " med ID: " + id);
+		       outputTekst.append("Du har lavet projektet: " + navn + " med ID: " + id + "\n ");
 		   }
 		   if(projektNavn.getText().length() == 0)
 		   {
