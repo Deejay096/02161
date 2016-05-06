@@ -20,9 +20,9 @@ import javax.swing.JTextField;
 public class tidregGUI extends JFrame implements ActionListener
 {
 	JButton tidregK; // vores knap
-	JTextField tidT; // vores text field
+	JTextField tidT, medT, akT; // vores text field
 	JTextArea tidVis; // vores text field
-	JLabel tidL; // vores label
+	JLabel tidL, medL, akL; // vores label
 	
 	public tidregGUI()
 	{
@@ -32,23 +32,34 @@ public class tidregGUI extends JFrame implements ActionListener
 	     Dimension spaceDimension = new Dimension(50, 30);
 	     getContentPane().setLayout(new BorderLayout());
 	     
-	     tidregK = new JButton("Printer Liste");
+	     tidregK = new JButton("registre din tid");
 	     tidregK.addActionListener(this);
 	     tidregK.setMaximumSize(BSize);
 	     tidregK.setAlignmentX(Component.CENTER_ALIGNMENT);
 	     
 	     tidT = new JTextField();
 	     tidT.setMaximumSize(TSize);
+	     medT = new JTextField();
+	     medT.setMaximumSize(TSize);
+	     akT = new JTextField();
+	     akT.setMaximumSize(TSize);
 	     
 	     tidVis = new JTextArea();
 	     tidVis.setSize(30, 30);
 	     tidVis.setMaximumSize(ASize);
 	     
 	     tidL = new JLabel("Indtast din arbejdstid");
-	     
+	     medL = new JLabel("Indtast medarbejder navn");
+	     akL = new JLabel("Indtast aktivitet navn");
 	     
 	     JPanel p1 = new JPanel();
 	     p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));
+	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
+	     p1.add(akL);
+	     p1.add(akT);
+	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
+	     p1.add(medL);
+	     p1.add(medT);
 	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
 	     p1.add(tidL);
 	     p1.add(tidT);
@@ -65,7 +76,22 @@ public class tidregGUI extends JFrame implements ActionListener
 		
 		if(e.getSource() == tidregK)
 		{
-			
+			if(akT.getText().length() != 0 && medT.getText().length() != 0&& medT.getText().length() != 0 && tidT.getText().length() != 0)
+			{
+				 
+			}
+			if(akT.getText().length() == 0)
+			{
+				akT.setText("mangler at blive udfyldt");
+			}
+			if(medT.getText().length() == 0)
+			{
+				medT.setText("mangler at blive udfyldt");
+			}
+			if(tidT.getText().length() == 0)
+			{
+				tidT.setText("mangler at blive udfyldt");
+			}
 		}
 	}
 

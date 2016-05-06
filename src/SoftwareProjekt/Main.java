@@ -5,6 +5,9 @@ import java.util.List;
 
 import javax.swing.JFrame;
 
+//Lavet af Jackie Vuong: studie nr. s153121 
+//og Kristian :  
+
 public class Main{
 	
 	public static List<Medarbejder> medarbejderList = new ArrayList<>();
@@ -23,7 +26,6 @@ public class Main{
 	public static void tilføjMedarbejderList(Medarbejder medarbejder){
 		medarbejderList.add(medarbejder);	
 	}
-	
 	
 	public static void main(String[] args){
 		Oprettelse op = new Oprettelse();
@@ -52,4 +54,33 @@ public class Main{
 		return null;
 	}
 	
+	public Aktivitet getAktivitet(String aktivitetNavn,String index)
+	{
+		if(aktivitetList.contains(index) == true || aktivitetList.contains(aktivitetNavn) == true ){
+			for (Aktivitet a: aktivitetList )
+			if(a.equals(index)){
+				return a;
+			}
+			for (Aktivitet a: aktivitetList )
+				if(a.equals(aktivitetNavn)){
+					return a;
+				}
+		}
+		return null;
+	}
+	
+	public Medarbejder getMedarbejder(String medNavn,String index)
+	{
+		if(medarbejderList.contains(index) == true || medarbejderList.contains(medNavn) == true ){
+			for (Medarbejder m: medarbejderList )
+			if(m.equals(index)){
+				return m;
+			}
+			for (Medarbejder m: medarbejderList )
+				if(m.equals(medNavn)){
+					return m;
+				}
+		}
+		return null;
+	}
 }
