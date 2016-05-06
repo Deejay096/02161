@@ -40,7 +40,7 @@ public class Main{
         frame.setVisible(true);	
 	}
 	
-	public Projekt getProjekt(String projektnavn,String index){
+	public static Projekt getProjekt(String projektnavn,String index){
 		if(projektList.contains(index) == true || projektList.contains(projektnavn) == true ){
 			for (Projekt p: projektList )
 			if(p.equals(index)){
@@ -54,7 +54,7 @@ public class Main{
 		return null;
 	}
 	
-	public Aktivitet getAktivitet(String aktivitetNavn,String index)
+	public static Aktivitet getAktivitet(String aktivitetNavn,String index)
 	{
 		if(aktivitetList.contains(index) == true || aktivitetList.contains(aktivitetNavn) == true ){
 			for (Aktivitet a: aktivitetList )
@@ -69,7 +69,7 @@ public class Main{
 		return null;
 	}
 	
-	public Medarbejder getMedarbejder(String medNavn,String index)
+	public static Medarbejder getMedarbejder(String medNavn,String index)
 	{
 		if(medarbejderList.contains(index) == true || medarbejderList.contains(medNavn) == true ){
 			for (Medarbejder m: medarbejderList )

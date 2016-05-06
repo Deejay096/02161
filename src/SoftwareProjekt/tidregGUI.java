@@ -78,7 +78,9 @@ public class tidregGUI extends JFrame implements ActionListener
 		{
 			if(akT.getText().length() != 0 && medT.getText().length() != 0&& medT.getText().length() != 0 && tidT.getText().length() != 0)
 			{
-				 
+				 Aktivitet a = Main.getAktivitet(akT.getText(), null);
+				 Medarbejder m = Main.getMedarbejder(medT.getText(), null);
+				 a.TidsRegistrering(m, Integer.parseInt(tidT.getText()));
 			}
 			if(akT.getText().length() == 0)
 			{
