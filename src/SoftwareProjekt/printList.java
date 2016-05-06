@@ -6,10 +6,10 @@ public class printList {
 
 //	static Oprettelse opret = new Oprettelse();
 	public static List<Medarbejder> medarbejderList = Main.getmedarbejderList();
-	
 	public static List<Aktivitet> aktivitetList = Main.getaktivitetList();
-	
 	public static List<Projekt> projektList = Main.getprojektList();
+	
+	printerGUI print = new printerGUI();
 
 	public void printMedarbejderList(){
 		if (medarbejderList.size() == 0){
@@ -33,7 +33,8 @@ public class printList {
 	}
 	public void printProjektList(){
 		if (projektList.size() == 0){
-			System.out.println("Der er ikke oprettet nogle projekter");
+			print.printT.setText("Der er ikke oprettet nogle projekter");
+			
 		}
 		else{
 			for(int i = 0; i < projektList.size(); i++) {
