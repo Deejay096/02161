@@ -23,7 +23,7 @@ public class printList {
 	}
 	public void printAktivitetList(){
 		if (aktivitetList.size() == 0){
-			System.out.println("Der er ikke oprettet nogle medarbejdere");
+			System.out.println("Der er ikke oprettet nogle aktiviteter");
 		}
 		else{
 			for(int i = 0; i < aktivitetList.size(); i++) {
@@ -33,7 +33,7 @@ public class printList {
 	}
 	public void printProjektList(){
 		if (projektList.size() == 0){
-			System.out.println("Der er ikke oprettet nogle medarbejdere");
+			System.out.println("Der er ikke oprettet nogle projekter");
 		}
 		else{
 			for(int i = 0; i < projektList.size(); i++) {

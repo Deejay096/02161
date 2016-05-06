@@ -15,7 +15,7 @@ public class Oprettelse {
 	//Vi opretter en medarbejder class med (String Navn,String Intialer,String Telefonnummer,String Email,String CPR)
 	public Medarbejder opretMedarbejder(String Navn,String Intialer,String Tlf,String Email,String CPR, Boolean Projektleder){
 		Medarbejder medarbejder = new Medarbejder(Navn,Intialer,Tlf,Email,CPR,Projektleder);
-		//medarbejderList.add(medarbejder);
+		Main.medarbejderList.add(medarbejder);
 		return medarbejder;
 	}
 	
