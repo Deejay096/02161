@@ -16,9 +16,8 @@ public class loginTest {
 
 	@Test
 	public void projektLederLoginTest(){
-		
-		assertFalse(logtest.projektlederlogin(tes2.getIntialer())); 
-		assertTrue(logtest.projektlederlogin(tes1.getIntialer()));
+		assertTrue(logtest.projektlederlogin("test1")); 
+		assertFalse(logtest.projektlederlogin("test2"));
 	}
 	
 	@Test
