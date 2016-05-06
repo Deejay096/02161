@@ -86,6 +86,37 @@ public class ferieGUI extends JFrame implements ActionListener
 	
 	public void actionPerformed(ActionEvent e)
 	{
-		
+		if(e.getSource() == ferK)
+		{
+			if(ferT.getText().length() != 0 && medT.getText().length() != 0)
+			{
+				 Medarbejder m = Main.getMedarbejder(medT.getText(), null);
+				 m.tidFerie(m, Integer.parseInt(ferT.getText()));
+			}
+			if(ferT.getText().length() == 0)
+			{
+				ferT.setText("mangler at blive udfyldt");
+			}
+			if(medT.getText().length() == 0)
+			{
+				medT.setText("mangler at blive udfyldt");
+			}
+		}
+		if(e.getSource() == sygK)
+		{
+			if(sygT.getText().length() != 0 && medTs.getText().length() != 0)
+			{
+				 Medarbejder m = Main.getMedarbejder(medTs.getText(), null);
+				 m.tidSyg(m, Integer.parseInt(ferT.getText()));
+			}
+			if(sygT.getText().length() == 0)
+			{
+				sygT.setText("mangler at blive udfyldt");
+			}
+			if(medTs.getText().length() == 0)
+			{
+				medTs.setText("mangler at blive udfyldt");
+			}
+		}
 	}
 }
