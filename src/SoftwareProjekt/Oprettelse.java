@@ -1,6 +1,4 @@
 package SoftwareProjekt;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Oprettelse {
 	public String Navn;

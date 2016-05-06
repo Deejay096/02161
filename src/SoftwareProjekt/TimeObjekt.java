@@ -1,10 +1,16 @@
 package SoftwareProjekt;
 
 public class TimeObjekt {
+	@SuppressWarnings("unused")
+	private TimeObjekt TimeObjekt;
+
 	public TimeObjekt(Medarbejder m,int tid){
 		this.m = m;
 		this.tid = tid;
 	}	
+	public TimeObjekt(TimeObjekt timeObjekt) {
+		this.TimeObjekt = new TimeObjekt(timeObjekt);
+	}
 	public int tid;
 	public Medarbejder m;
 

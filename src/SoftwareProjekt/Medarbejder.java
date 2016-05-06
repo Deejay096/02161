@@ -98,13 +98,10 @@ public class Medarbejder extends Oprettelse {
 	}
 	public void ledigMedarbejder(){
 		for(int i = 0; i < Fri.size(); i++) {
-			if (Fri. =! 0){
+			TimeObjekt TO = new TimeObjekt(Fri.get(i));		
+			if (!(TO.getTid()==0)){
 				System.out.println(Fri.get(i));
 			}
-			
-			
-//			TimeObjekt TO = new TimeObjekt(Main.medarbejderList.get(i),0);
-//			Fri.set(i, TO);
 		}
 	}
 }
