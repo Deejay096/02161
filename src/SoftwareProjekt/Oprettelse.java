@@ -1,3 +1,6 @@
+// Udarbejdet af Jackie Vuong og Krstian Krarup
+
+
 package SoftwareProjekt;
 
 public class Oprettelse {

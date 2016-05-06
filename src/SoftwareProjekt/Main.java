@@ -1,3 +1,6 @@
+// Udarbejdet af Jackie Vuong, Dejar Tarik og Krisitan Krarup
+
+
 package SoftwareProjekt;
 
 import java.util.ArrayList;

@@ -1,3 +1,6 @@
+
+// Udarbejdet af Jackie Vuong
+
 package SoftwareProjekt;
 
 import java.awt.BorderLayout;

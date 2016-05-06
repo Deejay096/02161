@@ -1,3 +1,5 @@
+// Udarbejdet af Dejar Tarik og Jackie Vuong 
+
 package SoftwareProjekt;
 
 import java.util.ArrayList;

@@ -1,3 +1,6 @@
+// Udarbejdet af Kristian Krarup og Jackie Vuong
+
+
 package TestSoftware;
 
 import static org.junit.Assert.*;

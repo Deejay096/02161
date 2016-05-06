@@ -1,3 +1,5 @@
+// Udarbejdet af Krstian Krarup
+
 package SoftwareProjekt;
 
 public class TimeObjekt {
