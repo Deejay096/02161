@@ -41,7 +41,7 @@ public class hovedGUI extends JFrame implements ActionListener
 	     tid.setMaximumSize(BSize);
 	     tid.setAlignmentX(Component.CENTER_ALIGNMENT);
 	     
-	     ferie = new JButton("Ferie og syge meldning");
+	     ferie = new JButton("Ferie og syge melding");
 	     ferie.addActionListener(this);
 	     ferie.setMaximumSize(BSize);
 	     ferie.setAlignmentX(Component.CENTER_ALIGNMENT);

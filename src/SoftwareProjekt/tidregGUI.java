@@ -45,7 +45,6 @@ public class tidregGUI extends JFrame implements ActionListener
 	     akT.setMaximumSize(TSize);
 	     
 	     tidVis = new JTextArea();
-	     tidVis.setSize(30, 30);
 	     tidVis.setMaximumSize(ASize);
 	     
 	     tidL = new JLabel("Indtast din arbejdstid");
@@ -76,7 +75,7 @@ public class tidregGUI extends JFrame implements ActionListener
 		
 		if(e.getSource() == tidregK)
 		{
-			if(akT.getText().length() != 0 && medT.getText().length() != 0&& medT.getText().length() != 0 && tidT.getText().length() != 0)
+			if(akT.getText().length() != 0 && medT.getText().length() != 0 && tidT.getText().length() != 0)
 			{
 				 Aktivitet a = Main.getAktivitet(akT.getText(), null);
 				 Medarbejder m = Main.getMedarbejder(medT.getText(), null);
