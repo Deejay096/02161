@@ -27,6 +27,7 @@ public class printList {
 		}
 		else{
 			for(int i = 0; i < aktivitetList.size(); i++) {
+				print.printT.setText(aktivitetList.get(i).getNavnA() + " | " + aktivitetList.get(i).getIndexA());
 				System.out.println(aktivitetList.get(i).getNavnA() + " | " + aktivitetList.get(i).getIndexA()); 
 			}
 		}
@@ -38,7 +39,7 @@ public class printList {
 		}
 		else{
 			for(int i = 0; i < projektList.size(); i++) {
-				System.out.println(projektList.get(i).getNavnP() + " | " + projektList.get(i).getIndexP());
+				print.printT.append(projektList.get(i).getNavnP() + " | " + projektList.get(i).getIndexP());
 			}
 		}
 	}

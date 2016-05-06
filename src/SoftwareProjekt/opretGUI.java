@@ -11,9 +11,10 @@ import java.awt.event.ActionListener;
 public class opretGUI extends JFrame implements ActionListener 
 {
 	JButton lavAktivitet, lavMedarbejder, lavProjekt; // vores knapper
-	JTextField aktivitetNavn, medarbejderNavn, projektNavn, aktivitetID, medarbejderID, projektID, medCPR, medTLF, medEmail, outputTekst; // vores text fields
+	JTextField aktivitetNavn, medarbejderNavn, projektNavn, aktivitetID, medarbejderID, projektID, medCPR, medTLF, medEmail; // vores text fields
 	JLabel aLabelNavn, mLabelNavn, pLabelNavn, aLabelID, mLabelID, pLabelID, mLabelCPR, mLabelTLF, mLabelEmail ; // vores labels
 	JScrollPane scrl = new JScrollPane();
+	JTextArea outputTekst;   // text fields
 	
 	public opretGUI()
 	{
@@ -44,7 +45,7 @@ public class opretGUI extends JFrame implements ActionListener
         medarbejderNavn = new JTextField();
         medarbejderNavn.setMaximumSize(TSize);
 
-        outputTekst = new JTextField();
+        outputTekst = new JTextArea();
         outputTekst.setSize(80, 50);
         outputTekst.add(scrl);
         aktivitetID = new JTextField();
