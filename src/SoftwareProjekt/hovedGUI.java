@@ -10,13 +10,8 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 
-//Lavet af Jackie Vuong: studie nr. s153121 
-
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextField;
 
 //Lavet af Jackie Vuong: studie nr. s153121 
 
@@ -26,7 +21,8 @@ public class hovedGUI extends JFrame implements ActionListener
 	
 	public hovedGUI()
 	{
-		 Dimension BSize = new Dimension(800, 50);
+		 
+		 Dimension BSize = new Dimension(500, 100);
 	     Dimension spaceDimension = new Dimension(300, 100);
 	     getContentPane().setLayout(new BorderLayout());
 	     
@@ -35,7 +31,7 @@ public class hovedGUI extends JFrame implements ActionListener
 	     opretK.setMaximumSize(BSize);
 	     opretK.setAlignmentX(Component.CENTER_ALIGNMENT);
 	     
-	     printK = new JButton("Pinter Menu");
+	     printK = new JButton("Printer Menu");
 	     printK.addActionListener(this);
 	     printK.setMaximumSize(BSize);
 	     printK.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -69,6 +65,7 @@ public class hovedGUI extends JFrame implements ActionListener
 		    frameOpret.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		    frameOpret.setVisible(true);	
 		    dispose();
+		    
 		}
 		
 		if(e.getSource() == printK)

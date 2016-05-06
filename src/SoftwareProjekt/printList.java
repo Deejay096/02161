@@ -9,7 +9,12 @@ public class printList {
 	public static List<Aktivitet> aktivitetList = Main.getaktivitetList();
 	public static List<Projekt> projektList = Main.getprojektList();
 	
-	printerGUI print = new printerGUI();
+	public printerGUI print;
+	
+	public printList(printerGUI print)
+	{
+		this.print = print;
+	}
 
 	public void printMedarbejderList(){
 		if (medarbejderList.size() == 0){
@@ -32,6 +37,7 @@ public class printList {
 			}
 		}
 	}
+	
 	public void printProjektList(){
 		if (projektList.size() == 0){
 			print.printT.setText("Der er ikke oprettet nogle projekter");

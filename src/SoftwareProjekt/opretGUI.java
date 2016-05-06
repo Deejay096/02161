@@ -47,7 +47,9 @@ public class opretGUI extends JFrame implements ActionListener
 
         outputTekst = new JTextArea();
         outputTekst.setSize(80, 50);
-        outputTekst.add(scrl);
+        scrl = new javax.swing.JScrollPane();
+        scrl.setViewportView(outputTekst);
+        
         aktivitetID = new JTextField();
         aktivitetID.setMaximumSize(TSize);
         projektID = new JTextField();

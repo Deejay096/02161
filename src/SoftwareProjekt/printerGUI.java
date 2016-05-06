@@ -23,8 +23,8 @@ public class printerGUI extends JFrame implements ActionListener
 
 	public printerGUI()
 	{
-		 Dimension BSize = new Dimension(500, 50);
-	     Dimension spaceDimension = new Dimension(100, 100);
+		 Dimension BSize = new Dimension(300, 100);
+	     Dimension spaceDimension = new Dimension(100, 50);
 	     getContentPane().setLayout(new BorderLayout());
 	     
 	     printM = new JButton("Print Medarbejder Liste");
@@ -43,7 +43,7 @@ public class printerGUI extends JFrame implements ActionListener
 	     printP.setAlignmentX(Component.CENTER_ALIGNMENT);
 	     
 	     printT = new JTextArea();
-	     printT.setSize(300, 300);
+	     printT.setSize(300, 100);
 	     
 	     JPanel p1 = new JPanel();
 	     p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));
@@ -61,7 +61,7 @@ public class printerGUI extends JFrame implements ActionListener
 	
 	public void actionPerformed(ActionEvent e)
 	{
-		printList print = new printList();
+		printList print = new printList(this);
 		
 		if(e.getSource() == printM)
 		{
