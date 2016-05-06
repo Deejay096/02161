@@ -60,20 +60,25 @@ public class loginGUI extends JFrame implements ActionListener
 	{
 		if(e.getSource() == logK)
 		{
-			if(log.projektlederlogin(logT.getText()) == true)
-			{
-				hovedGUI frameH = new hovedGUI();
-		        frameH.setTitle("softwareudviklingsprojekter");
-		        frameH.setSize(1000, 560);
-		        frameH.setResizable(true);
-		        frameH.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		        frameH.setVisible(true);		
-		        logT.setText("");
-		        dispose();
-			}
-			else
-			{
-				logT.setText("");
+			try {
+				if(log.projektlederlogin(logT.getText()) == true)
+				{
+					hovedGUI frameH = new hovedGUI();
+				    frameH.setTitle("softwareudviklingsprojekter");
+				    frameH.setSize(1000, 560);
+				    frameH.setResizable(true);
+				    frameH.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+				    frameH.setVisible(true);		
+				    logT.setText("");
+				    dispose();
+				}
+				else
+				{
+					logT.setText("");
+				}
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
 		}
 	

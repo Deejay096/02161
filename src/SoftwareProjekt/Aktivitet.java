@@ -17,10 +17,10 @@ public class Aktivitet {
 		Aktivitet.index = index;
 	}
 
-	public static String getNavnA()	{
+	public String getNavnA()	{
 		return Navn;
 	}
-	public static String getIndexA()	{
+	public String getIndexA()	{
 		return index;
 	}
 
@@ -46,7 +46,6 @@ public class Aktivitet {
 		if (x = false){
 			System.out.println("FEJL: Medarbejderen du prøver at tilføje til aktiviteten er ikke i listen over medarbejder.");
 		}
-
 	}
 
 	public void FjernMedarbejder(TimeObjekt Medarbejder){
@@ -55,7 +54,6 @@ public class Aktivitet {
 				to.remove(i);
 			}
 		}
-
 	}
 	public static void PrintTimeObjekt(List<TimeObjekt> liste){
 		if (to.size() == 0){

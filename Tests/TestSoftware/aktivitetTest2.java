@@ -21,9 +21,7 @@ public class aktivitetTest2 {
 	public void get(){
 		
 	}
-	
-	
-	
+
 	@Test
 	public void TidsRegtest() {
 		Aktivitet Tidreg = new Aktivitet(navn1,index1);
@@ -35,13 +33,9 @@ public class aktivitetTest2 {
 
 	@Test
 	public void TilfoejMedarbejderTest(){
-		
 		//Aktivitet tilfoej = new Aktivitet(navn1, index1);
-		
 		Medarbejder tilfoej2 = new Medarbejder(Navn, Initialer, Tlf, Email, CPR, false);
-		
 		Aktivitet.TilfoejMedarbejder(tilfoej2);
-		
 		//assertTrue(Main.MedarbejderList(tilfoej2));
 		//
 		

@@ -7,20 +7,19 @@ public class Login {
 	public static List<Medarbejder> list = Main.getmedarbejderList();
 
 
-	public boolean projektlederlogin(String intialer){
-		for(int i = 0; i <= list.size(); i++){
-			if ((list.get(i).Intialer.equals(intialer) && (list.get(i).Projektleder == true)))
+	public boolean projektlederlogin(String intialer) {
+		for(int i = 0; i < list.size(); i++){
+			if ((list.get(i).Intialer.equals(intialer) && (list.get(i).Projektleder == true))) 
 			{
 				return true;
 			}
-		}
+		} 
 		System.out.println("Fejl"); 
 		return false;
 	}
-
-	public boolean medarbejderlogin(String intialer){
+	public boolean medarbejderlogin(String intialer) throws IndexOutOfBoundsException {
 		for(int i = 0; i < list.size(); i++){
-			if ((list.get(i).Intialer.equals(intialer) && (list.get(i).Projektleder == true)))
+			if ((list.get(i).Intialer.equals(intialer) && (list.get(i).Projektleder == false)))
 			{
 				return true;
 			}

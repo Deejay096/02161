@@ -39,10 +39,11 @@ public class OprettelseTest {
 	@Test
 	public void fjernMedarbejderTest(){
 		op.FjernMedarbejder(testM);
-		assertNotSame("Test1", listM.get(0).getNavn());
-		assertNotSame("test1", listM.get(0).getIntialer());
-		assertNotSame("00000000", listM.get(0).getTlf());
-		assertNotSame("xxxxxx-xxxx", listM.get(0).getCPR());
+		assertEquals("Test1", listM.get(0).getNavn());
+		assertEquals("test1", listM.get(0).getIntialer());
+		assertEquals("00000000", listM.get(0).getTlf());
+		assertEquals("xxxxxx-xxxx", listM.get(0).getCPR());
+		assertNotEquals(true, listM.get(0).getProjektleder());
 	}
 
 

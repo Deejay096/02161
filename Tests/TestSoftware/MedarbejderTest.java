@@ -1,6 +1,10 @@
 package TestSoftware;
 
 import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 
 import SoftwareProjekt.Medarbejder;
@@ -12,6 +16,7 @@ public class MedarbejderTest {
 	String Tlf = "12345678";
 	String Email = "LL@softwarehuset.dk";
 	String CPR = "1401881111";
+	public static List<Medarbejder> medarbejderList = new ArrayList<>();
 	
 	@Test
 	public void medarbejderSygTest() {
@@ -35,5 +40,12 @@ public class MedarbejderTest {
 		ferie.tidFerie(ferie, tid);
 		
 	}
+	@Test
+	public void medarbejderPrintTest(){
+		
+		
+		
+	}
+	 
 
 }

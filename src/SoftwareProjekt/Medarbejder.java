@@ -61,10 +61,10 @@ public class Medarbejder extends Oprettelse {
 	public String getTlf(){
 		return Tlf;
 	}
-	public static String getEmail(){
+	public String getEmail(){
 		return Email;
 	}
-	public static String getCPR(){
+	public String getCPR(){
 		return CPR;
 	}
 	public boolean getProjektleder(){
