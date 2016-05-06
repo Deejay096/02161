@@ -17,13 +17,11 @@ public class opretGUI extends JFrame implements ActionListener
 	
 	public opretGUI()
 	{
-
         Dimension BSize = new Dimension(200, 25);
         Dimension TSize = new Dimension(300, 25);
         Dimension spaceDimension = new Dimension(300, 10);
         getContentPane().setLayout(new BorderLayout());
       
-
         lavAktivitet = new JButton("Lav Aktivitet");
         lavAktivitet.addActionListener(this);
         lavAktivitet.setMaximumSize(BSize);
@@ -48,6 +46,7 @@ public class opretGUI extends JFrame implements ActionListener
 
         outputTekst = new JTextField();
         outputTekst.setSize(80, 50);
+        outputTekst.add(scrl);
         aktivitetID = new JTextField();
         aktivitetID.setMaximumSize(TSize);
         projektID = new JTextField();
@@ -115,6 +114,7 @@ public class opretGUI extends JFrame implements ActionListener
         p2.add(lavMedarbejder);
         p2.add(Box.createRigidArea(new Dimension(spaceDimension)));
         p2.add(outputTekst);
+        
         
         
         JPanel p3 = new JPanel();

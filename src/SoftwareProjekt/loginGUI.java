@@ -67,6 +67,7 @@ public class loginGUI extends JFrame implements ActionListener
 		        frameH.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		        frameH.setVisible(true);		
 		        logT.setText("");
+		        dispose();
 			}
 			else
 			{
