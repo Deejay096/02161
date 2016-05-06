@@ -60,12 +60,12 @@ public class loginGUI extends JFrame implements ActionListener
 		{
 			if(log.projektlederlogin(logT.getText()) == true)
 			{
-				opretGUI frameOpret = new opretGUI();
-		        frameOpret.setTitle("softwareudviklingsprojekter");
-		        frameOpret.setSize(1000, 560);
-		        frameOpret.setResizable(true);
-		        frameOpret.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		        frameOpret.setVisible(true);		
+				hovedGUI frameH = new hovedGUI();
+		        frameH.setTitle("softwareudviklingsprojekter");
+		        frameH.setSize(1000, 560);
+		        frameH.setResizable(true);
+		        frameH.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		        frameH.setVisible(true);		
 		        logT.setText("");
 			}
 			else
