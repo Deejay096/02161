@@ -143,8 +143,7 @@ public class opretGUI extends JFrame implements ActionListener
 		   {
 			   String navn = aktivitetNavn.getText();
 		       String id = aktivitetID.getText();
-		       Aktivitet aktivitet = op.opretAktivitet(navn, id);   
-		       
+		       op.opretAktivitet(navn, id);   
 		       outputTekst.setText("Du har lavet aktiviteten: " + navn + " med ID: " + id);
 		   }
 		   if(aktivitetNavn.getText().length() == 0)
@@ -166,7 +165,7 @@ public class opretGUI extends JFrame implements ActionListener
 		      String cpr = medCPR.getText();
 		      String TLF = medTLF.getText();
 		      String Email = medEmail.getText();
-		      Medarbejder medarbejder = new Medarbejder(navn,id,TLF,Email,cpr,false); 
+		      op.opretMedarbejder(navn,id,TLF,Email,cpr,false); 
 		      outputTekst.setText("Du har lavet medarbejder: " + navn + " med Initial: " + id + " med Telefon nr.: " + TLF + " med e-mail: " + Email + " med CPR nr.: " + cpr);
 		      
 		   }  
@@ -198,7 +197,7 @@ public class opretGUI extends JFrame implements ActionListener
 		   {
 			   String navn = projektNavn.getText();
 		       String id = projektID.getText();
-		       Projekt projekt = new Projekt(navn,id);   
+		       op.opretProjekt(navn, id);
 		       outputTekst.setText("Du har lavet projektet: " + navn + " med ID: " + id);
 		   }
 		   if(projektNavn.getText().length() == 0)

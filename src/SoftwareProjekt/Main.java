@@ -29,8 +29,7 @@ public class Main{
 		Oprettelse op = new Oprettelse();
 		Medarbejder m = op.opretMedarbejder("Kristian Krarup", "KK", "23346859", "s144122@student.dtu.dk", "120894-xxxx", true);
 		Medarbejder m1 = op.opretMedarbejder("Kristian Krarup", "KK2", "23346859", "s144122@student.dtu.dk", "120894-xxxx", true);
-		tilføjMedarbejderList(m);
-		tilføjMedarbejderList(m1);
+		
 		
 		printList print = new printList();
 		print.printMedarbejderList();
