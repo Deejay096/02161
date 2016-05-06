@@ -18,7 +18,7 @@ import javax.swing.JTextField;
 
 public class printerGUI extends JFrame implements ActionListener
 {
-	JButton printM, printA, printP ; // vores knapper
+	JButton printM, printA, printP, tb ; // vores knapper
 	JTextArea printT; // vores text field
 
 	public printerGUI()
@@ -42,6 +42,11 @@ public class printerGUI extends JFrame implements ActionListener
 	     printP.setMaximumSize(BSize);
 	     printP.setAlignmentX(Component.CENTER_ALIGNMENT);
 	     
+	     tb = new JButton("Tilbage");
+	     tb.addActionListener(this);
+	     tb.setMaximumSize(BSize);
+	     tb.setAlignmentX(Component.CENTER_ALIGNMENT);
+	     
 	     printT = new JTextArea();
 	     printT.setSize(100, 100);
 	     
@@ -55,6 +60,7 @@ public class printerGUI extends JFrame implements ActionListener
 	     p1.add(printP);
 	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
 	     p1.add(printT);
+	     p1.add(tb);
 	     
 	     getContentPane().add(p1, BorderLayout.CENTER);
 	}
@@ -75,6 +81,16 @@ public class printerGUI extends JFrame implements ActionListener
 		if(e.getSource() == printP)
 		{
 			print.printProjektList();
+		}
+		if (e.getSource() == tb)
+		{
+			hovedGUI frameH = new hovedGUI();
+		    frameH.setTitle("softwareudviklingsprojekter");
+		    frameH.setSize(1000, 560);
+		    frameH.setResizable(true);
+		    frameH.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		    frameH.setVisible(true);		
+		    dispose();
 		}
 	}
 }

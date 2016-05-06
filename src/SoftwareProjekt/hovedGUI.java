@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 public class hovedGUI extends JFrame implements ActionListener
 {
-	JButton opretK, printK, tid, ferie; // vores knapper
+	JButton opretK, printK, tid, ferie, logud; // vores knapper
 	
 	public hovedGUI()
 	{
@@ -46,6 +46,11 @@ public class hovedGUI extends JFrame implements ActionListener
 	     ferie.setMaximumSize(BSize);
 	     ferie.setAlignmentX(Component.CENTER_ALIGNMENT);
 	     
+	     logud = new JButton("Log ud");
+	     logud.addActionListener(this);
+	     logud.setMaximumSize(BSize);
+	     logud.setAlignmentX(Component.CENTER_ALIGNMENT);
+	     
 	     JPanel p1 = new JPanel();
 	     p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));
 	     p1.add(opretK);
@@ -55,6 +60,8 @@ public class hovedGUI extends JFrame implements ActionListener
 	     p1.add(tid);
 	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
 	     p1.add(ferie);
+	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
+	     p1.add(logud);
 	        
 	     getContentPane().add(p1, BorderLayout.CENTER);
 	     
@@ -101,6 +108,16 @@ public class hovedGUI extends JFrame implements ActionListener
 		    frameFerie.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		    frameFerie.setVisible(true);
 			dispose();
+		}
+		if(e.getSource() == logud)
+		{
+			loginGUI frame = new loginGUI();
+	        frame.setTitle("softwareudviklingsprojekter");
+	        frame.setSize(500, 300);
+	        frame.setResizable(true);
+	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	        frame.setVisible(true);	
+	        dispose();
 		}
 	}
 }

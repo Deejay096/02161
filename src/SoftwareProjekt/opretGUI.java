@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 
 public class opretGUI extends JFrame implements ActionListener 
 {
-	JButton lavAktivitet, lavMedarbejder, lavProjekt; // vores knapper
+	JButton lavAktivitet, lavMedarbejder, lavProjekt, tb; // vores knapper
 	JTextField aktivitetNavn, medarbejderNavn, projektNavn, aktivitetID, medarbejderID, projektID, medCPR, medTLF, medEmail; // vores text fields
 	JLabel aLabelNavn, mLabelNavn, pLabelNavn, aLabelID, mLabelID, pLabelID, mLabelCPR, mLabelTLF, mLabelEmail ; // vores labels
 	JScrollPane scrl = new JScrollPane();
@@ -38,6 +38,11 @@ public class opretGUI extends JFrame implements ActionListener
         lavMedarbejder.setMaximumSize(BSize);
         lavMedarbejder.setAlignmentX(Component.CENTER_ALIGNMENT);
 
+        tb = new JButton("Tilbage");
+        tb.addActionListener(this);
+        tb.setMaximumSize(BSize);
+        tb.setAlignmentX(Component.CENTER_ALIGNMENT);
+        
         aktivitetNavn = new JTextField();
         aktivitetNavn.setMaximumSize(TSize);
         projektNavn = new JTextField();
@@ -117,8 +122,7 @@ public class opretGUI extends JFrame implements ActionListener
         p2.add(lavMedarbejder);
         p2.add(Box.createRigidArea(new Dimension(spaceDimension)));
         p2.add(outputTekst);
-        
-        
+        p2.add(tb);
         
         JPanel p3 = new JPanel();
         p3.setLayout(new BoxLayout(p3, BoxLayout.PAGE_AXIS));
@@ -211,6 +215,16 @@ public class opretGUI extends JFrame implements ActionListener
 		   {
 			   projektID.setText("mangler at blive udfyldt");
 		   }
+	   }
+	   if (e.getSource() == tb)
+	   {
+		   hovedGUI frameH = new hovedGUI();
+	       frameH.setTitle("softwareudviklingsprojekter");
+	       frameH.setSize(1000, 560);
+	       frameH.setResizable(true);
+	       frameH.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+	       frameH.setVisible(true);		
+	       dispose();
 	   }
 	 }
 	

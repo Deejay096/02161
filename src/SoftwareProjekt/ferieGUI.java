@@ -19,7 +19,7 @@ import javax.swing.JTextField;
 
 public class ferieGUI extends JFrame implements ActionListener
 {
-	JButton sygK, ferK; // vores knapper
+	JButton sygK, ferK, tb; // vores knapper
 	JTextField sygT, ferT, medT, medTs; // vores text field
 	JTextArea Vis; // vores text field
 	JLabel sygL, ferL, medL, medLs; // vores label
@@ -41,6 +41,11 @@ public class ferieGUI extends JFrame implements ActionListener
 	    ferK.addActionListener(this);
 	    ferK.setMaximumSize(BSize);
 	    ferK.setAlignmentX(Component.CENTER_ALIGNMENT);
+	    
+	    tb = new JButton("Tilbage");
+        tb.addActionListener(this);
+        tb.setMaximumSize(BSize);
+        tb.setAlignmentX(Component.CENTER_ALIGNMENT);
 	     
 	     sygT = new JTextField();
 	     sygT.setMaximumSize(TSize);
@@ -61,25 +66,23 @@ public class ferieGUI extends JFrame implements ActionListener
 	     
 	     JPanel p1 = new JPanel();
 	     p1.setLayout(new BoxLayout(p1, BoxLayout.PAGE_AXIS));
-	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
 	     p1.add(medL);
 	     p1.add(medT);
-	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
 	     p1.add(ferL);
 	     p1.add(ferT);
 	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
 	     p1.add(ferK);
-	     
 	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
 	     p1.add(medLs);
 	     p1.add(medTs);
-	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
 	     p1.add(sygL);
 	     p1.add(sygT);
 	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
 	     p1.add(sygK);
 	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
-	     p1.add(Vis);       
+	     p1.add(Vis);
+	     p1.add(tb);
+	     
 	     
 	     getContentPane().add(p1, BorderLayout.CENTER);
 	}
@@ -117,6 +120,16 @@ public class ferieGUI extends JFrame implements ActionListener
 			{
 				medTs.setText("mangler at blive udfyldt");
 			}
+		}
+		if (e.getSource() == tb)
+		{
+			hovedGUI frameH = new hovedGUI();
+		    frameH.setTitle("softwareudviklingsprojekter");
+		    frameH.setSize(1000, 560);
+		    frameH.setResizable(true);
+		    frameH.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		    frameH.setVisible(true);		
+		    dispose();
 		}
 	}
 }

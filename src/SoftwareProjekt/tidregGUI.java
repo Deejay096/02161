@@ -19,7 +19,7 @@ import javax.swing.JTextField;
 
 public class tidregGUI extends JFrame implements ActionListener
 {
-	JButton tidregK; // vores knap
+	JButton tidregK, tb; // vores knapper
 	JTextField tidT, medT, akT; // vores text field
 	JTextArea tidVis; // vores text field
 	JLabel tidL, medL, akL; // vores label
@@ -36,6 +36,11 @@ public class tidregGUI extends JFrame implements ActionListener
 	     tidregK.addActionListener(this);
 	     tidregK.setMaximumSize(BSize);
 	     tidregK.setAlignmentX(Component.CENTER_ALIGNMENT);
+	     
+	     tb = new JButton("Tilbage");
+	     tb.addActionListener(this);
+	     tb.setMaximumSize(BSize);
+	     tb.setAlignmentX(Component.CENTER_ALIGNMENT);
 	     
 	     tidT = new JTextField();
 	     tidT.setMaximumSize(TSize);
@@ -66,6 +71,7 @@ public class tidregGUI extends JFrame implements ActionListener
 	     p1.add(tidregK);
 	     p1.add(Box.createRigidArea(new Dimension(spaceDimension)));
 	     p1.add(tidVis);
+	     p1.add(tb);
 	     
 	     getContentPane().add(p1, BorderLayout.CENTER);
 	}
@@ -93,6 +99,16 @@ public class tidregGUI extends JFrame implements ActionListener
 			{
 				tidT.setText("mangler at blive udfyldt");
 			}
+		}
+		if (e.getSource() == tb)
+		{
+			hovedGUI frameH = new hovedGUI();
+		    frameH.setTitle("softwareudviklingsprojekter");
+		    frameH.setSize(1000, 560);
+		    frameH.setResizable(true);
+		    frameH.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		    frameH.setVisible(true);		
+		    dispose();
 		}
 	}
 }
