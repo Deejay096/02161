@@ -13,6 +13,7 @@ public class opretGUI extends JFrame implements ActionListener
 	JButton lavAktivitet, lavMedarbejder, lavProjekt; // vores knapper
 	JTextField aktivitetNavn, medarbejderNavn, projektNavn, aktivitetID, medarbejderID, projektID, medCPR, medTLF, medEmail, outputTekst; // vores text fields
 	JLabel aLabelNavn, mLabelNavn, pLabelNavn, aLabelID, mLabelID, pLabelID, mLabelCPR, mLabelTLF, mLabelEmail ; // vores labels
+	JScrollPane scrl = new JScrollPane();
 	
 	public opretGUI()
 	{
@@ -21,6 +22,7 @@ public class opretGUI extends JFrame implements ActionListener
         Dimension TSize = new Dimension(300, 25);
         Dimension spaceDimension = new Dimension(300, 10);
         getContentPane().setLayout(new BorderLayout());
+      
 
         lavAktivitet = new JButton("Lav Aktivitet");
         lavAktivitet.addActionListener(this);
@@ -114,6 +116,7 @@ public class opretGUI extends JFrame implements ActionListener
         p2.add(Box.createRigidArea(new Dimension(spaceDimension)));
         p2.add(outputTekst);
         
+        
         JPanel p3 = new JPanel();
         p3.setLayout(new BoxLayout(p3, BoxLayout.PAGE_AXIS));
         p3.add(Box.createRigidArea(new Dimension(spaceDimension)));
@@ -161,7 +164,7 @@ public class opretGUI extends JFrame implements ActionListener
 		      String TLF = medTLF.getText();
 		      String Email = medEmail.getText();
 		      Medarbejder medarbejder = new Medarbejder(navn,id,TLF,Email,cpr,false); 
-		      outputTekst.setText("Du har lavet aktiviteten: " + navn + " med ID: " + id + " med Telefon nr.: " + TLF + " med e-mail: " + Email + " med CPR nr.: " + cpr);
+		      outputTekst.setText("Du har lavet medarbejder: " + navn + " med Initial: " + id + " med Telefon nr.: " + TLF + " med e-mail: " + Email + " med CPR nr.: " + cpr);
 		      
 		   }  
 		   if(medarbejderNavn.getText().length() == 0)
