@@ -133,7 +133,9 @@ public class opretGUI extends JFrame implements ActionListener
         getContentPane().add(p3, BorderLayout.EAST);
     }
 	
-	 public void actionPerformed( ActionEvent e) {
+	 public void actionPerformed( ActionEvent e)
+	 {
+		Oprettelse op = new Oprettelse();
 
 	   if (e.getSource() == lavAktivitet)
 	   {
@@ -141,7 +143,8 @@ public class opretGUI extends JFrame implements ActionListener
 		   {
 			   String navn = aktivitetNavn.getText();
 		       String id = aktivitetID.getText();
-		       Aktivitet aktivitet = new Aktivitet(navn,id);   
+		       Aktivitet aktivitet = op.opretAktivitet(navn, id);   
+		       
 		       outputTekst.setText("Du har lavet aktiviteten: " + navn + " med ID: " + id);
 		   }
 		   if(aktivitetNavn.getText().length() == 0)

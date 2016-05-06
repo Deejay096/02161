@@ -54,19 +54,22 @@ public class loginGUI extends JFrame implements ActionListener
         getContentPane().add(p1, BorderLayout.CENTER);
 	}
 
-
 	public void actionPerformed(ActionEvent e) 
 	{
 		if(e.getSource() == logK)
 		{
 			if(log.projektlederlogin(logT.getText()) == true)
 			{
-				opretGUI frame = new opretGUI();
-		        frame.setTitle("softwareudviklingsprojekter");
-		        frame.setSize(1000, 560);
-		        frame.setResizable(true);
-		        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		        frame.setVisible(true);	
+				opretGUI frameOpret = new opretGUI();
+		        frameOpret.setTitle("softwareudviklingsprojekter");
+		        frameOpret.setSize(1000, 560);
+		        frameOpret.setResizable(true);
+		        frameOpret.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		        frameOpret.setVisible(true);		      
+			}
+			else
+			{
+				logT.setText("");
 			}
 		}
 	
