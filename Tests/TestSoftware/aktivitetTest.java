@@ -4,7 +4,6 @@ package TestSoftware;
 import org.junit.Test;
 
 import SoftwareProjekt.Aktivitet;
-import SoftwareProjekt.Main;
 import SoftwareProjekt.Medarbejder;
 import SoftwareProjekt.TimeObjekt;
 
@@ -50,5 +49,10 @@ public class aktivitetTest {
 		TimeObjekt TO = new TimeObjekt(med,0);
 		
 		Aktivitet.FjernMedarbejder(TO);
+	}
+	@Test
+	public void PrintTimeObjektTest()
+	{
+		Aktivitet.PrintTimeObjekt();
 	}
 }

@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Medarbejder extends Oprettelse {
-	public static String Navn;
+	public String Navn;
 	public String Intialer;
-	public static String Tlf;
-	public static String Email;
-	public static String CPR;
+	public String Tlf;
+	public String Email;
+	public String CPR;
 	public Boolean Projektleder;
 
 	public static List<TimeObjekt> Syg =  new ArrayList<>();
@@ -53,7 +53,7 @@ public class Medarbejder extends Oprettelse {
 		this.CPR = CPR;
 		this.Projektleder = Projektleder;
 	}
-	public static String getNavn(){
+	public String getNavn(){
 		return Navn;
 	}
 	public String getIntialer(){

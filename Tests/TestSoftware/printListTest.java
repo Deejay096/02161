@@ -1,18 +1,20 @@
+// Udarbejdet af Jackie Vuong: studie nr. s153121
+
 package TestSoftware;
-
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 import SoftwareProjekt.printList;
 
-public class printListTest {
-
+public class printListTest
+{
+	printList p = new printList(null);
+	
 	@Test
-	public void printMedarbejderTest() {
-		printList printm = new printList(null);
-		
-			
+	public void printTest()
+	{
+		p.printAktivitetList();
+		p.printMedarbejderList();
+		p.printProjektList();
 	}
 
 }

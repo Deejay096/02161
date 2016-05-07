@@ -6,17 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Aktivitet {
-	public static String Navn; 
+	public String Navn; 
 	public double Tid;
 	public static List<TimeObjekt> to =  new ArrayList<>();
-	public static String index;
+	public String index;
 
 	public static Oprettelse opret = new Oprettelse();
 	public static List<Medarbejder> list = Main.getmedarbejderList();
 
 	public Aktivitet(String navn, String index)	{
-		Aktivitet.Navn = navn;
-		Aktivitet.index = index;
+		this.Navn = navn;
+		this.index = index;
 	}
 
 	public String getNavnA()	{
@@ -57,14 +57,13 @@ public class Aktivitet {
 			}
 		}
 	}
-	public static void PrintTimeObjekt(List<TimeObjekt> liste){
+	public static void PrintTimeObjekt(){
 		if (to.size() == 0){
 			System.out.println("Der er ikke oprettet nogle medarbejdere");
 		}
 		else{
 			for(int i = 0; i < to.size(); i++) {
-
-				System.out.println(Medarbejder.getNavn() + " | " + list.get(i).getIntialer() + " | "  + list.get(i).getTlf() + " | "  + list.get(i).getEmail() + " | "  + list.get(i).getCPR() + " | "  + list.get(i).getProjektleder() + " | " + to.get(i).getTid() );
+				System.out.println(list.get(i).getNavn() + " | " + list.get(i).getIntialer() + " | "  + list.get(i).getTlf() + " | "  + list.get(i).getEmail() + " | "  + list.get(i).getCPR() + " | "  + list.get(i).getProjektleder() + " | " + to.get(i).getTid() );
 			}
 		}
 	}
