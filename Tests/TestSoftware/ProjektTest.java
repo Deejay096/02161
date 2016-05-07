@@ -1,14 +1,19 @@
+// Udarbejdet af Jackie Vuong: studie nr. s153121
+
 package TestSoftware;
-
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
-public class ProjektTest {
+import SoftwareProjekt.Projekt;
 
+public class ProjektTest
+{
+	Projekt p = new Projekt("hi", "123");
+	
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void getTest() 
+	{
+		p.getNavnP();
+		p.getIndexP();
 	}
 
 }
