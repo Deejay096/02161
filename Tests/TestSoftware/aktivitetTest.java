@@ -1,14 +1,14 @@
-//Udarbejdet af s154414- Dejar Tarik 
+//Udarbejdet af s154414- Dejar Tarik og Jackie Vuong: studie nr. s153121
 
 package TestSoftware;
-
 import org.junit.Test;
 
 import SoftwareProjekt.Aktivitet;
 import SoftwareProjekt.Main;
 import SoftwareProjekt.Medarbejder;
+import SoftwareProjekt.TimeObjekt;
 
-public class aktivitetTest2 {
+public class aktivitetTest {
 	String navn1 = "Idiotprojekt";
 	String index1 = "123456879";
 	
@@ -20,8 +20,12 @@ public class aktivitetTest2 {
 	
 	
 	@Test
-	public void get(){
+	public void getTest()
+	{
+		Aktivitet a = new Aktivitet(navn1,index1);
 		
+		a.getNavnA();
+		a.getIndexA();
 	}
 
 	@Test
@@ -30,18 +34,21 @@ public class aktivitetTest2 {
 		Medarbejder reg = new Medarbejder(Navn, Initialer, Tlf, Email, CPR, false);
 		int tid2 = 8;
 		Tidreg.TidsRegistrering(reg, tid2);
-		//assertTrue()
 	}
 
 	@Test
-	public void TilfoejMedarbejderTest(){
-		//Aktivitet tilfoej = new Aktivitet(navn1, index1);
+	public void TilfoejMedarbejderTest()
+	{
 		Medarbejder tilfoej2 = new Medarbejder(Navn, Initialer, Tlf, Email, CPR, false);
-		Aktivitet.TilfoejMedarbejder(tilfoej2);
-		//assertTrue(Main.MedarbejderList(tilfoej2));
-		//
+		Aktivitet.TilfoejMedarbejder(tilfoej2);	
+	}
+	
+	@Test
+	public void FjernMedarbejderTest()
+	{
+		Medarbejder med = new Medarbejder(Navn, Initialer, Tlf, Email, CPR, false);
+		TimeObjekt TO = new TimeObjekt(med,0);
 		
-		
-		
+		Aktivitet.FjernMedarbejder(TO);
 	}
 }

@@ -12,9 +12,7 @@ public class printListTest {
 	public void printMedarbejderTest() {
 		printList printm = new printList(null);
 		
-		
-		
-		
+			
 	}
 
 }

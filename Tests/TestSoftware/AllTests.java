@@ -7,7 +7,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ aktivitetTest2.class, loginTest.class, MedarbejderTest.class, OprettelseTest.class, printListTest.class,
+@SuiteClasses({ aktivitetTest.class, loginTest.class, MedarbejderTest.class, OprettelseTest.class, printListTest.class,
 		timeObjektTest.class })
 public class AllTests {
 

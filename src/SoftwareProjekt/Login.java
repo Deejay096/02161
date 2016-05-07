@@ -16,7 +16,6 @@ public class Login {
 				return true;
 			}
 		} 
-		System.out.println("Fejl"); 
 		return false;
 	}
 	public boolean medarbejderlogin(String intialer) throws IndexOutOfBoundsException {

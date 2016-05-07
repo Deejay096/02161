@@ -1,7 +1,6 @@
 // Udarbejdet af Kristian Krarup
 
 package SoftwareProjekt;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class Medarbejder extends Oprettelse {
 	public static List<TimeObjekt> Syg =  new ArrayList<>();
 	public static List<TimeObjekt> Ferie =  new ArrayList<>();
 	public static List<TimeObjekt> Fri =  new ArrayList<>();
-
+	
 	public void kopiList(){
 		if (Main.medarbejderList.size() == 0){
 			System.out.println("Der er ikke oprettet nogle medarbejdere"); 
@@ -36,13 +35,13 @@ public class Medarbejder extends Oprettelse {
 		}
 	}
 	
-	public static List<TimeObjekt> getSyg() {
+	public List<TimeObjekt> getSyg() {
 	    return Syg;
 	}
-	public static List<TimeObjekt> getFerie() {
+	public List<TimeObjekt> getFerie() {
 	    return Ferie;
 	}
-	public static List<TimeObjekt> getFri() {
+	public List<TimeObjekt> getFri() {
 	    return Fri;
 	}
 
@@ -90,7 +89,7 @@ public class Medarbejder extends Oprettelse {
 			}
 		}
 	}
-	public void tidFRi(Medarbejder m,int tid){
+	public void tidFri(Medarbejder m,int tid){
 		for(TimeObjekt q: Fri) {
 			if(q.getMedarbejder() == m){
 				q.updateTid(tid);

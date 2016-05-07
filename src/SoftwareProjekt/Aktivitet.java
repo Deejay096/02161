@@ -50,7 +50,7 @@ public class Aktivitet {
 		}
 	}
 
-	public void FjernMedarbejder(TimeObjekt Medarbejder){
+	public static void FjernMedarbejder(TimeObjekt Medarbejder){
 		for(int i = 0; i > to.size(); i++){
 			if(to.get(i) == Medarbejder){
 				to.remove(i);

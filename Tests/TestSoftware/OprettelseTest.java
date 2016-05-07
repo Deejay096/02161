@@ -1,12 +1,8 @@
-//Udarbejdet af s154414- Dejar Tarik, Kristian Krarup, og Jackie Vuon 
+//Udarbejdet af s154414- Dejar Tarik, Kristian Krarup, og Jackie Vuong 
 
 package TestSoftware;
-
-
 import static org.junit.Assert.*;
-
 import java.util.List;
-
 import org.junit.Test;
 
 import SoftwareProjekt.Aktivitet;
@@ -14,7 +10,6 @@ import SoftwareProjekt.Main;
 import SoftwareProjekt.Medarbejder;
 import SoftwareProjekt.Oprettelse;
 import SoftwareProjekt.Projekt;
-
 
 public class OprettelseTest {
 	Oprettelse op = new Oprettelse();
@@ -45,7 +40,7 @@ public class OprettelseTest {
 		assertEquals("test1", listM.get(0).getIntialer());
 		assertEquals("00000000", listM.get(0).getTlf());
 		assertEquals("xxxxxx-xxxx", listM.get(0).getCPR());
-		assertNotEquals(true, listM.get(0).getProjektleder());
+		assertEquals(true, listM.get(0).getProjektleder());
 	}
 
 

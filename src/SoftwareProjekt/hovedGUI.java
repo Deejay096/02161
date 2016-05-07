@@ -1,7 +1,6 @@
 // Udarbejdet af Jackie Vuong: studie nr. s153121
 
 package SoftwareProjekt;
-
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dimension;
