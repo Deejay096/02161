@@ -4,10 +4,12 @@ package TestSoftware;
 import org.junit.Test;
 
 import SoftwareProjekt.printList;
+import SoftwareProjekt.printerGUI;
 
 public class printListTest
 {
-	printList p = new printList(null);
+	public printerGUI print = new printerGUI();
+	printList p = new printList(print);
 	
 	@Test
 	public void printTest()

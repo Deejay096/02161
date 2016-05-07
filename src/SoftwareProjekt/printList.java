@@ -1,7 +1,6 @@
 // Udarbejdet af Kristian Krarup
 
 package SoftwareProjekt;
-
 import java.util.List;
 
 public class printList {
