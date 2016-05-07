@@ -1,14 +1,11 @@
-// Udarbejdet af Jackie Vuong
+// Udarbejdet af Jackie Vuong: studie nr. s153121
 
 package SoftwareProjekt;
-import java.util.ArrayList;
-import java.util.List;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-//Lavet af Jackie Vuong: studie nr. s153121 
 
 public class opretGUI extends JFrame implements ActionListener 
 {

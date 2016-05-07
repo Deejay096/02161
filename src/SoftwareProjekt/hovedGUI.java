@@ -1,4 +1,4 @@
-// Udarbejdet af Jackie Vuong
+// Udarbejdet af Jackie Vuong: studie nr. s153121
 
 package SoftwareProjekt;
 
@@ -11,11 +11,8 @@ import java.awt.event.ActionListener;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-//Lavet af Jackie Vuong: studie nr. s153121 
 
 public class hovedGUI extends JFrame implements ActionListener
 {

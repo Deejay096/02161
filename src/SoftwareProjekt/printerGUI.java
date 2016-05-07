@@ -1,4 +1,4 @@
-// Udarbejdet af Jackie Vuong
+// Udarbejdet af Jackie Vuong: studie nr. s153121
 
 package SoftwareProjekt;
 
@@ -14,9 +14,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
-
-//Lavet af Jackie Vuong: studie nr. s153121 
 
 public class printerGUI extends JFrame implements ActionListener
 {

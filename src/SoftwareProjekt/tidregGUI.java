@@ -1,8 +1,6 @@
-
-// Udarbejdet af Jackie Vuong
+// Udarbejdet af Jackie Vuong: studie nr. s153121
 
 package SoftwareProjekt;
-
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -17,8 +15,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-
-//Lavet af Jackie Vuong: studie nr. s153121 
 
 public class tidregGUI extends JFrame implements ActionListener
 {
